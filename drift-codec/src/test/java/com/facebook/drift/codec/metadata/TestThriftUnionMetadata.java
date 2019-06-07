@@ -20,7 +20,6 @@ import com.facebook.drift.codec.UnionBuilder;
 import com.facebook.drift.codec.UnionConstructor;
 import com.facebook.drift.codec.UnionField;
 import com.facebook.drift.codec.UnionMethod;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -144,7 +143,7 @@ public class TestThriftUnionMetadata
 
         ThriftStructMetadata metadata = builder.build();
         assertNotNull(metadata);
-        Assert.assertEquals(ThriftStructMetadata.MetadataType.UNION, metadata.getMetadataType());
+        assertEquals(ThriftStructMetadata.MetadataType.UNION, metadata.getMetadataType());
 
         verifyField(metadata, 1, "stringValue");
         verifyField(metadata, 2, "longValue");

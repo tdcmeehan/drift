@@ -17,8 +17,9 @@ package com.facebook.drift.codec.metadata;
 
 import com.facebook.drift.annotations.ThriftField;
 import com.google.common.collect.ImmutableList;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
 
 public class TestReflectionHelper
 {
@@ -26,7 +27,7 @@ public class TestReflectionHelper
     public void testExtractParameterNamesNoAnnotations()
             throws Exception
     {
-        Assert.assertEquals(
+        assertEquals(
                 ReflectionHelper.extractParameterNames(getClass().getDeclaredMethod("noAnnotations", String.class, String.class, String.class)),
                 ImmutableList.of("a", "b", "c"));
     }
@@ -39,7 +40,7 @@ public class TestReflectionHelper
     public void testExtractParameterNamesThriftFieldAnnotation()
             throws Exception
     {
-        Assert.assertEquals(
+        assertEquals(
                 ReflectionHelper.extractParameterNames(getClass().getDeclaredMethod("thriftFieldAnnotation", String.class, String.class, String.class)),
                 ImmutableList.of("a", "b", "c"));
     }
@@ -55,7 +56,7 @@ public class TestReflectionHelper
     public void testExtractParameterNamesMixedThriftFieldAnnotation()
             throws Exception
     {
-        Assert.assertEquals(
+        assertEquals(
                 ReflectionHelper.extractParameterNames(getClass().getDeclaredMethod("mixedThriftFieldAnnotation", String.class, String.class, String.class)),
                 ImmutableList.of("a", "b", "c"));
     }

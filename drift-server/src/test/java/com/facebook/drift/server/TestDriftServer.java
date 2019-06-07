@@ -32,7 +32,6 @@ import com.google.common.util.concurrent.ListenableFuture;
 import com.google.inject.Injector;
 import io.airlift.bootstrap.Bootstrap;
 import io.airlift.bootstrap.LifeCycleManager;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.Optional;
@@ -69,15 +68,15 @@ public class TestDriftServer
 
         TestingServerTransport serverTransport = serverTransportFactory.getServerTransport();
         assertNotNull(serverTransport);
-        Assert.assertEquals(serverTransport.getState(), TestingServerTransport.State.NOT_STARTED);
+        assertEquals(serverTransport.getState(), TestingServerTransport.State.NOT_STARTED);
 
         driftServer.start();
-        Assert.assertEquals(serverTransport.getState(), TestingServerTransport.State.RUNNING);
+        assertEquals(serverTransport.getState(), TestingServerTransport.State.RUNNING);
 
         testServer(resultsSupplier, testService, statsFactory, serverTransport);
 
         driftServer.shutdown();
-        Assert.assertEquals(serverTransport.getState(), TestingServerTransport.State.SHUTDOWN);
+        assertEquals(serverTransport.getState(), TestingServerTransport.State.SHUTDOWN);
     }
 
     @Test
@@ -101,15 +100,15 @@ public class TestDriftServer
 
         TestingServerTransport serverTransport = serverTransportFactory.getServerTransport();
         assertNotNull(serverTransport);
-        Assert.assertEquals(serverTransport.getState(), TestingServerTransport.State.NOT_STARTED);
+        assertEquals(serverTransport.getState(), TestingServerTransport.State.NOT_STARTED);
 
         driftServer.start();
-        Assert.assertEquals(serverTransport.getState(), TestingServerTransport.State.RUNNING);
+        assertEquals(serverTransport.getState(), TestingServerTransport.State.RUNNING);
 
         testServer(resultsSupplier, TestingInvocationTarget.combineTestingInvocationTarget(passThroughFilter, shortCircuitFilter), statsFactory, serverTransport);
 
         driftServer.shutdown();
-        Assert.assertEquals(serverTransport.getState(), TestingServerTransport.State.SHUTDOWN);
+        assertEquals(serverTransport.getState(), TestingServerTransport.State.SHUTDOWN);
     }
 
     @Test
@@ -137,7 +136,7 @@ public class TestDriftServer
                     .initialize();
             lifeCycleManager = injector.getInstance(LifeCycleManager.class);
 
-            Assert.assertEquals(serverTransportFactory.getServerTransport().getState(), TestingServerTransport.State.RUNNING);
+            assertEquals(serverTransportFactory.getServerTransport().getState(), TestingServerTransport.State.RUNNING);
 
             testServer(resultsSupplier, testService, statsFactory, serverTransportFactory.getServerTransport());
         }
@@ -154,7 +153,7 @@ public class TestDriftServer
             }
         }
 
-        Assert.assertEquals(serverTransportFactory.getServerTransport().getState(), TestingServerTransport.State.SHUTDOWN);
+        assertEquals(serverTransportFactory.getServerTransport().getState(), TestingServerTransport.State.SHUTDOWN);
     }
 
     @Test
@@ -187,7 +186,7 @@ public class TestDriftServer
                     .initialize();
             lifeCycleManager = injector.getInstance(LifeCycleManager.class);
 
-            Assert.assertEquals(serverTransportFactory.getServerTransport().getState(), TestingServerTransport.State.RUNNING);
+            assertEquals(serverTransportFactory.getServerTransport().getState(), TestingServerTransport.State.RUNNING);
 
             testServer(resultsSupplier, TestingInvocationTarget.combineTestingInvocationTarget(passThroughFilter, shortCircuitFilter), statsFactory, serverTransportFactory.getServerTransport());
         }
@@ -204,7 +203,7 @@ public class TestDriftServer
             }
         }
 
-        Assert.assertEquals(serverTransportFactory.getServerTransport().getState(), TestingServerTransport.State.SHUTDOWN);
+        assertEquals(serverTransportFactory.getServerTransport().getState(), TestingServerTransport.State.SHUTDOWN);
     }
 
     private static void testServer(
