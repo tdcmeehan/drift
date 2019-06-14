@@ -16,7 +16,7 @@
 package com.facebook.drift.client;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import io.airlift.drift.transport.client.MethodInvokerFactory;
+import com.facebook.drift.transport.client.MethodInvokerFactory;
 
 import java.util.function.Supplier;
 

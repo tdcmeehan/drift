@@ -23,8 +23,8 @@ import com.google.inject.Provides;
 import com.google.inject.Singleton;
 import io.airlift.configuration.ConfigBinder;
 import io.airlift.configuration.ConfigurationBinding;
-import io.airlift.drift.transport.client.DriftClientConfig;
-import io.airlift.drift.transport.client.MethodInvokerFactory;
+import com.facebook.drift.transport.client.DriftClientConfig;
+import com.facebook.drift.transport.client.MethodInvokerFactory;
 
 import java.lang.annotation.Annotation;
 

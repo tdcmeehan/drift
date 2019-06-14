@@ -31,7 +31,7 @@ import io.airlift.drift.annotations.ThriftService;
 import io.airlift.drift.annotations.ThriftStruct;
 import io.airlift.drift.codec.ThriftCodecManager;
 import com.facebook.drift.server.stats.MethodInvocationStatsFactory;
-import io.airlift.drift.transport.server.ServerTransportFactory;
+import com.facebook.drift.transport.server.ServerTransportFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

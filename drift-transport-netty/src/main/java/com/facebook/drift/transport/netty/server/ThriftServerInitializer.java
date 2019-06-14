@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.transport.netty.server;
 
-import io.airlift.drift.transport.server.ServerMethodInvoker;
+import com.facebook.drift.transport.server.ServerMethodInvoker;
 import io.airlift.units.DataSize;
 import io.airlift.units.Duration;
 import io.netty.channel.ChannelInitializer;

@@ -15,8 +15,8 @@
  */
 package com.facebook.drift.server;
 
-import io.airlift.drift.transport.server.ServerTransport;
-import io.airlift.drift.transport.server.ServerTransportFactory;
+import com.facebook.drift.transport.server.ServerTransport;
+import com.facebook.drift.transport.server.ServerTransportFactory;
 
 import static com.google.common.base.Preconditions.checkState;
 
@@ -31,7 +31,7 @@ public class TestingServerTransportFactory
     }
 
     @Override
-    public synchronized ServerTransport createServerTransport(io.airlift.drift.transport.server.ServerMethodInvoker serverMethodInvoker)
+    public synchronized ServerTransport createServerTransport(com.facebook.drift.transport.server.ServerMethodInvoker serverMethodInvoker)
     {
         checkState(this.serverTransport == null);
         this.serverTransport = new TestingServerTransport(serverMethodInvoker);

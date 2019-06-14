@@ -22,8 +22,8 @@ import com.google.inject.Key;
 import com.google.inject.Module;
 import com.google.inject.Scopes;
 import com.google.inject.TypeLiteral;
-import io.airlift.drift.transport.client.DriftClientConfig;
-import io.airlift.drift.transport.client.MethodInvokerFactory;
+import com.facebook.drift.transport.client.DriftClientConfig;
+import com.facebook.drift.transport.client.MethodInvokerFactory;
 import io.netty.buffer.ByteBufAllocator;
 
 import javax.annotation.PreDestroy;

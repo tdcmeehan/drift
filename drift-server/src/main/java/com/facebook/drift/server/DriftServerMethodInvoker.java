@@ -25,9 +25,9 @@ import io.airlift.drift.TApplicationException.Type;
 import io.airlift.drift.codec.ThriftCodecManager;
 import io.airlift.drift.codec.metadata.ThriftMethodMetadata;
 import io.airlift.drift.codec.metadata.ThriftServiceMetadata;
-import io.airlift.drift.transport.MethodMetadata;
-import io.airlift.drift.transport.server.ServerInvokeRequest;
-import io.airlift.drift.transport.server.ServerMethodInvoker;
+import com.facebook.drift.transport.MethodMetadata;
+import com.facebook.drift.transport.server.ServerInvokeRequest;
+import com.facebook.drift.transport.server.ServerMethodInvoker;
 
 import java.util.Collection;
 import java.util.HashMap;

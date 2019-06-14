@@ -37,8 +37,8 @@ import com.facebook.drift.client.stats.MethodInvocationStatsFactory;
 import com.facebook.drift.client.stats.NullMethodInvocationStatsFactory;
 import io.airlift.drift.codec.ThriftCodecManager;
 import io.airlift.drift.codec.guice.ThriftCodecModule;
-import io.airlift.drift.transport.client.DriftClientConfig;
-import io.airlift.drift.transport.client.MethodInvokerFactory;
+import com.facebook.drift.transport.client.DriftClientConfig;
+import com.facebook.drift.transport.client.MethodInvokerFactory;
 import org.weakref.jmx.MBeanExporter;
 
 import javax.inject.Inject;

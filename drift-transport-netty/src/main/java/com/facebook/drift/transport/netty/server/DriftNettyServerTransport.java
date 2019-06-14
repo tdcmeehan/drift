@@ -17,8 +17,8 @@ package com.facebook.drift.transport.netty.server;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.facebook.drift.transport.netty.ssl.SslContextFactory;
-import io.airlift.drift.transport.server.ServerMethodInvoker;
-import io.airlift.drift.transport.server.ServerTransport;
+import com.facebook.drift.transport.server.ServerMethodInvoker;
+import com.facebook.drift.transport.server.ServerTransport;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.channel.Channel;

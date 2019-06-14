@@ -19,7 +19,7 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.inject.Binder;
 import com.google.inject.Module;
 import com.google.inject.Scopes;
-import io.airlift.drift.transport.server.ServerTransportFactory;
+import com.facebook.drift.transport.server.ServerTransportFactory;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.buffer.PooledByteBufAllocator;
 

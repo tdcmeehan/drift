@@ -28,7 +28,7 @@ import com.facebook.drift.transport.apache.client.ApacheThriftClientConfig;
 import com.facebook.drift.transport.apache.client.ApacheThriftClientModule;
 import com.facebook.drift.transport.apache.client.ApacheThriftConnectionFactoryConfig;
 import com.facebook.drift.transport.apache.client.ApacheThriftMethodInvokerFactory;
-import io.airlift.drift.transport.client.DriftClientConfig;
+import com.facebook.drift.transport.client.DriftClientConfig;
 import com.facebook.drift.transport.netty.codec.Protocol;
 import com.facebook.drift.transport.netty.codec.Transport;
 

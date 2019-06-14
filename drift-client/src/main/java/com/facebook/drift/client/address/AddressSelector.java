@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.client.address;
 
-import io.airlift.drift.transport.client.Address;
+import com.facebook.drift.transport.client.Address;
 
 import java.util.Optional;
 import java.util.Set;

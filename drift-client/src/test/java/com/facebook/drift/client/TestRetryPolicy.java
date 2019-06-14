@@ -15,8 +15,8 @@
  */
 package com.facebook.drift.client;
 
-import io.airlift.drift.transport.client.DriftApplicationException;
-import io.airlift.drift.transport.client.DriftClientConfig;
+import com.facebook.drift.transport.client.DriftApplicationException;
+import com.facebook.drift.transport.client.DriftClientConfig;
 import org.testng.annotations.Test;
 
 import java.util.Optional;

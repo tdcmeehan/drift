@@ -26,12 +26,12 @@ import io.airlift.drift.TException;
 import com.facebook.drift.client.address.AddressSelector;
 import com.facebook.drift.client.stats.MethodInvocationStat;
 import io.airlift.drift.protocol.TTransportException;
-import io.airlift.drift.transport.MethodMetadata;
-import io.airlift.drift.transport.client.Address;
-import io.airlift.drift.transport.client.ConnectionFailedException;
-import io.airlift.drift.transport.client.DriftApplicationException;
-import io.airlift.drift.transport.client.InvokeRequest;
-import io.airlift.drift.transport.client.MethodInvoker;
+import com.facebook.drift.transport.MethodMetadata;
+import com.facebook.drift.transport.client.Address;
+import com.facebook.drift.transport.client.ConnectionFailedException;
+import com.facebook.drift.transport.client.DriftApplicationException;
+import com.facebook.drift.transport.client.InvokeRequest;
+import com.facebook.drift.transport.client.MethodInvoker;
 import io.airlift.log.Logger;
 import io.airlift.units.Duration;
 

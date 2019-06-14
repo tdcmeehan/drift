@@ -24,7 +24,7 @@ import com.facebook.drift.client.address.AddressSelector;
 import com.facebook.drift.integration.scribe.drift.DriftAsyncScribe;
 import com.facebook.drift.integration.scribe.drift.DriftLogEntry;
 import com.facebook.drift.integration.scribe.drift.DriftScribe;
-import io.airlift.drift.transport.client.DriftClientConfig;
+import com.facebook.drift.transport.client.DriftClientConfig;
 import com.facebook.drift.transport.netty.buffer.TestingPooledByteBufAllocator;
 import com.facebook.drift.transport.netty.client.DriftNettyClientConfig;
 import com.facebook.drift.transport.netty.client.DriftNettyClientModule;

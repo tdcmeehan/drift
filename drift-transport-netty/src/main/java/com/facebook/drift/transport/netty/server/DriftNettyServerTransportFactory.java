@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.transport.netty.server;
 
-import io.airlift.drift.transport.server.ServerMethodInvoker;
-import io.airlift.drift.transport.server.ServerTransport;
-import io.airlift.drift.transport.server.ServerTransportFactory;
+import com.facebook.drift.transport.server.ServerMethodInvoker;
+import com.facebook.drift.transport.server.ServerTransport;
+import com.facebook.drift.transport.server.ServerTransportFactory;
 import io.netty.buffer.ByteBufAllocator;
 
 import javax.inject.Inject;

@@ -26,7 +26,7 @@ import com.facebook.drift.client.RetriesFailedException;
 import com.facebook.drift.integration.guice.EchoService.EmptyOptionalException;
 import com.facebook.drift.integration.guice.EchoService.NullValueException;
 import com.facebook.drift.integration.scribe.drift.DriftLogEntry;
-import io.airlift.drift.transport.client.MessageTooLargeException;
+import com.facebook.drift.transport.client.MessageTooLargeException;
 import com.facebook.drift.transport.netty.buffer.TestingPooledByteBufAllocator;
 import com.facebook.drift.transport.netty.client.DriftNettyClientModule;
 import com.facebook.drift.transport.netty.server.DriftNettyServerModule;

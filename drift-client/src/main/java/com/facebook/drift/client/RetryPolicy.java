@@ -16,10 +16,10 @@
 package com.facebook.drift.client;
 
 import io.airlift.drift.protocol.TTransportException;
-import io.airlift.drift.transport.client.ConnectionFailedException;
-import io.airlift.drift.transport.client.DriftClientConfig;
-import io.airlift.drift.transport.client.MessageTooLargeException;
-import io.airlift.drift.transport.client.RequestTimeoutException;
+import com.facebook.drift.transport.client.ConnectionFailedException;
+import com.facebook.drift.transport.client.DriftClientConfig;
+import com.facebook.drift.transport.client.MessageTooLargeException;
+import com.facebook.drift.transport.client.RequestTimeoutException;
 import io.airlift.units.Duration;
 
 import java.io.InterruptedIOException;

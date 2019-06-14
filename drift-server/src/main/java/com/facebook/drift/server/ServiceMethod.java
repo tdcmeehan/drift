@@ -22,8 +22,8 @@ import io.airlift.drift.codec.metadata.ThriftHeaderParameter;
 import io.airlift.drift.codec.metadata.ThriftInjection;
 import io.airlift.drift.codec.metadata.ThriftMethodMetadata;
 import io.airlift.drift.codec.metadata.ThriftParameterInjection;
-import io.airlift.drift.transport.MethodMetadata;
-import io.airlift.drift.transport.server.ServerInvokeRequest;
+import com.facebook.drift.transport.MethodMetadata;
+import com.facebook.drift.transport.server.ServerInvokeRequest;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -33,7 +33,7 @@ import static com.google.common.base.MoreObjects.toStringHelper;
 import static com.google.common.util.concurrent.Futures.immediateFailedFuture;
 import static com.google.common.util.concurrent.Futures.immediateFuture;
 import static com.facebook.drift.server.FilteredMethodInvoker.createFilteredMethodInvoker;
-import static io.airlift.drift.transport.MethodMetadata.toMethodMetadata;
+import static com.facebook.drift.transport.MethodMetadata.toMethodMetadata;
 import static java.util.Objects.requireNonNull;
 
 class ServiceMethod

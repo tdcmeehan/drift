@@ -17,8 +17,8 @@ package com.facebook.drift.transport.netty.client;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.net.HostAndPort;
-import io.airlift.drift.transport.client.MethodInvoker;
-import io.airlift.drift.transport.client.MethodInvokerFactory;
+import com.facebook.drift.transport.client.MethodInvoker;
+import com.facebook.drift.transport.client.MethodInvokerFactory;
 import com.facebook.drift.transport.netty.client.ConnectionManager.ConnectionParameters;
 import com.facebook.drift.transport.netty.ssl.SslContextFactory;
 import com.facebook.drift.transport.netty.ssl.SslContextFactory.SslContextParameters;

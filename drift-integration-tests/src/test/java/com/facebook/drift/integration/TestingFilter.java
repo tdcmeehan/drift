@@ -17,8 +17,8 @@ package com.facebook.drift.integration;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.client.MethodInvocationFilter;
-import io.airlift.drift.transport.client.InvokeRequest;
-import io.airlift.drift.transport.client.MethodInvoker;
+import com.facebook.drift.transport.client.InvokeRequest;
+import com.facebook.drift.transport.client.MethodInvoker;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

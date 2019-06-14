@@ -16,7 +16,7 @@
 package com.facebook.drift.server;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import io.airlift.drift.transport.server.ServerInvokeRequest;
+import com.facebook.drift.transport.server.ServerInvokeRequest;
 
 public interface MethodInvocationFilter
 {

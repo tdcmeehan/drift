@@ -25,11 +25,11 @@ import com.google.common.collect.ImmutableMap;
 import io.airlift.drift.codec.ThriftCodecManager;
 import io.airlift.drift.codec.metadata.ThriftMethodMetadata;
 import io.airlift.drift.codec.metadata.ThriftServiceMetadata;
-import io.airlift.drift.transport.MethodMetadata;
-import io.airlift.drift.transport.client.Address;
-import io.airlift.drift.transport.client.DriftClientConfig;
-import io.airlift.drift.transport.client.MethodInvoker;
-import io.airlift.drift.transport.client.MethodInvokerFactory;
+import com.facebook.drift.transport.MethodMetadata;
+import com.facebook.drift.transport.client.Address;
+import com.facebook.drift.transport.client.DriftClientConfig;
+import com.facebook.drift.transport.client.MethodInvoker;
+import com.facebook.drift.transport.client.MethodInvokerFactory;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -43,7 +43,7 @@ import java.util.function.Supplier;
 import static com.facebook.drift.client.ExceptionClassifier.NORMAL_RESULT;
 import static com.facebook.drift.client.FilteredMethodInvoker.createFilteredMethodInvoker;
 import static com.google.common.reflect.Reflection.newProxy;
-import static io.airlift.drift.transport.MethodMetadata.toMethodMetadata;
+import static com.facebook.drift.transport.MethodMetadata.toMethodMetadata;
 import static java.util.Objects.requireNonNull;
 
 public class DriftClientFactory

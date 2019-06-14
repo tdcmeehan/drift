@@ -16,9 +16,9 @@
 package com.facebook.drift.server;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import io.airlift.drift.transport.MethodMetadata;
-import io.airlift.drift.transport.server.ServerInvokeRequest;
-import io.airlift.drift.transport.server.ServerTransport;
+import com.facebook.drift.transport.MethodMetadata;
+import com.facebook.drift.transport.server.ServerInvokeRequest;
+import com.facebook.drift.transport.server.ServerTransport;
 
 import java.util.Map;
 import java.util.Optional;
@@ -34,10 +34,10 @@ public class TestingServerTransport
         NOT_STARTED, RUNNING, SHUTDOWN
     }
 
-    private final io.airlift.drift.transport.server.ServerMethodInvoker serverMethodInvoker;
+    private final com.facebook.drift.transport.server.ServerMethodInvoker serverMethodInvoker;
     private State state = State.NOT_STARTED;
 
-    public TestingServerTransport(io.airlift.drift.transport.server.ServerMethodInvoker serverMethodInvoker)
+    public TestingServerTransport(com.facebook.drift.transport.server.ServerMethodInvoker serverMethodInvoker)
     {
         this.serverMethodInvoker = serverMethodInvoker;
     }

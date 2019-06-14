@@ -35,9 +35,9 @@ import io.airlift.drift.annotations.ThriftStruct;
 import io.airlift.drift.codec.ThriftCodecManager;
 import io.airlift.drift.protocol.TProtocolException;
 import io.airlift.drift.protocol.TTransportException;
-import io.airlift.drift.transport.client.DriftClientConfig;
-import io.airlift.drift.transport.client.InvokeRequest;
-import io.airlift.drift.transport.client.MethodInvokerFactory;
+import com.facebook.drift.transport.client.DriftClientConfig;
+import com.facebook.drift.transport.client.InvokeRequest;
+import com.facebook.drift.transport.client.MethodInvokerFactory;
 import org.testng.annotations.Test;
 
 import javax.inject.Qualifier;

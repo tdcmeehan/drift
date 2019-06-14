@@ -21,9 +21,9 @@ import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.client.address.AddressSelector;
 import com.facebook.drift.client.stats.MethodInvocationStat;
 import io.airlift.drift.codec.metadata.ThriftHeaderParameter;
-import io.airlift.drift.transport.MethodMetadata;
-import io.airlift.drift.transport.client.Address;
-import io.airlift.drift.transport.client.MethodInvoker;
+import com.facebook.drift.transport.MethodMetadata;
+import com.facebook.drift.transport.client.Address;
+import com.facebook.drift.transport.client.MethodInvoker;
 
 import java.util.LinkedHashMap;
 import java.util.List;

@@ -27,7 +27,7 @@ import com.google.inject.Key;
 import com.google.inject.Module;
 import com.google.inject.multibindings.Multibinder;
 import io.airlift.drift.codec.guice.ThriftCodecModule;
-import io.airlift.drift.transport.server.DriftServerConfig;
+import com.facebook.drift.transport.server.DriftServerConfig;
 import org.weakref.jmx.MBeanExporter;
 
 import javax.inject.Inject;

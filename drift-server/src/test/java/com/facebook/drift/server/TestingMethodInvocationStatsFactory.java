@@ -17,7 +17,7 @@ package com.facebook.drift.server;
 
 import io.airlift.drift.codec.metadata.ThriftServiceMetadata;
 import com.facebook.drift.server.stats.MethodInvocationStatsFactory;
-import io.airlift.drift.transport.MethodMetadata;
+import com.facebook.drift.transport.MethodMetadata;
 
 import java.util.Objects;
 import java.util.Optional;
