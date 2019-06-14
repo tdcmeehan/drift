@@ -17,7 +17,7 @@ package com.facebook.drift.transport.netty.codec;
 
 import com.google.common.collect.ImmutableMap;
 import io.airlift.drift.TException;
-import io.airlift.drift.codec.internal.ProtocolWriter;
+import com.facebook.drift.codec.internal.ProtocolWriter;
 import io.airlift.drift.protocol.TMessage;
 import io.airlift.drift.protocol.TProtocolWriter;
 import com.facebook.drift.transport.netty.buffer.TestingPooledByteBufAllocator;

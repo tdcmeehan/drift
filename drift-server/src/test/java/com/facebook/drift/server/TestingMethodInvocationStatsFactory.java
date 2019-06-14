@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.server;
 
-import io.airlift.drift.codec.metadata.ThriftServiceMetadata;
+import com.facebook.drift.codec.metadata.ThriftServiceMetadata;
 import com.facebook.drift.server.stats.MethodInvocationStatsFactory;
 import com.facebook.drift.transport.MethodMetadata;
 

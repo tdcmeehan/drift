@@ -18,10 +18,10 @@ package com.facebook.drift.transport;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.reflect.TypeToken;
-import io.airlift.drift.codec.ThriftCodec;
-import io.airlift.drift.codec.ThriftCodecManager;
-import io.airlift.drift.codec.metadata.ThriftMethodMetadata;
-import io.airlift.drift.codec.metadata.ThriftType;
+import com.facebook.drift.codec.ThriftCodec;
+import com.facebook.drift.codec.ThriftCodecManager;
+import com.facebook.drift.codec.metadata.ThriftMethodMetadata;
+import com.facebook.drift.codec.metadata.ThriftType;
 
 import java.util.List;
 import java.util.Map;

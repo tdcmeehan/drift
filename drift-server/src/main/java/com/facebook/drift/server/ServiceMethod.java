@@ -16,12 +16,12 @@
 package com.facebook.drift.server;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import io.airlift.drift.codec.ThriftCodecManager;
-import io.airlift.drift.codec.metadata.ThriftFieldMetadata;
-import io.airlift.drift.codec.metadata.ThriftHeaderParameter;
-import io.airlift.drift.codec.metadata.ThriftInjection;
-import io.airlift.drift.codec.metadata.ThriftMethodMetadata;
-import io.airlift.drift.codec.metadata.ThriftParameterInjection;
+import com.facebook.drift.codec.ThriftCodecManager;
+import com.facebook.drift.codec.metadata.ThriftFieldMetadata;
+import com.facebook.drift.codec.metadata.ThriftHeaderParameter;
+import com.facebook.drift.codec.metadata.ThriftInjection;
+import com.facebook.drift.codec.metadata.ThriftMethodMetadata;
+import com.facebook.drift.codec.metadata.ThriftParameterInjection;
 import com.facebook.drift.transport.MethodMetadata;
 import com.facebook.drift.transport.server.ServerInvokeRequest;
 

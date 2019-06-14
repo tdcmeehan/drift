@@ -17,7 +17,7 @@ package com.facebook.drift.server;
 
 import com.facebook.drift.server.stats.MethodInvocationStatsFactory;
 import com.google.common.collect.ImmutableList;
-import io.airlift.drift.codec.ThriftCodecManager;
+import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.transport.server.ServerTransport;
 import com.facebook.drift.transport.server.ServerTransportFactory;
 

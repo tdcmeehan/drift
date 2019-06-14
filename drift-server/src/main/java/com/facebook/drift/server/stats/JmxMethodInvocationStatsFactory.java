@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.server.stats;
 
-import io.airlift.drift.codec.metadata.ThriftServiceMetadata;
+import com.facebook.drift.codec.metadata.ThriftServiceMetadata;
 import com.facebook.drift.transport.MethodMetadata;
 import org.weakref.jmx.MBeanExporter;
 import org.weakref.jmx.ObjectNameBuilder;

@@ -18,7 +18,7 @@ package com.facebook.drift.client;
 import com.facebook.drift.client.address.AddressSelector;
 import com.facebook.drift.client.stats.MethodInvocationStatsFactory;
 import com.facebook.drift.client.stats.NullMethodInvocationStatsFactory;
-import io.airlift.drift.codec.ThriftCodecManager;
+import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.transport.client.MethodInvokerFactory;
 
 import static java.util.Objects.requireNonNull;

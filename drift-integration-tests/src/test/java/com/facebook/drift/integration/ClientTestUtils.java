@@ -26,7 +26,7 @@ import io.airlift.bootstrap.LifeCycleManager;
 import com.facebook.drift.client.DriftClient;
 import com.facebook.drift.client.MethodInvocationFilter;
 import com.facebook.drift.client.address.AddressSelector;
-import io.airlift.drift.codec.ThriftCodecManager;
+import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.integration.scribe.apache.LogEntry;
 import com.facebook.drift.integration.scribe.drift.DriftLogEntry;
 import com.facebook.drift.integration.scribe.drift.DriftResultCode;

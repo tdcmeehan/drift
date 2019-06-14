@@ -17,8 +17,8 @@ package com.facebook.drift.transport.netty.server;
 
 import io.airlift.drift.TApplicationException;
 import io.airlift.drift.TException;
-import io.airlift.drift.codec.ThriftCodec;
-import io.airlift.drift.codec.ThriftCodecManager;
+import com.facebook.drift.codec.ThriftCodec;
+import com.facebook.drift.codec.ThriftCodecManager;
 import io.airlift.drift.protocol.TProtocolWriter;
 
 final class ExceptionWriter

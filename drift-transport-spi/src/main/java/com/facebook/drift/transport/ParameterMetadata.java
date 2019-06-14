@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.transport;
 
-import io.airlift.drift.codec.ThriftCodec;
+import com.facebook.drift.codec.ThriftCodec;
 
 import static com.google.common.base.MoreObjects.toStringHelper;
 import static com.google.common.base.Preconditions.checkArgument;

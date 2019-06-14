@@ -17,6 +17,10 @@ package com.facebook.drift.client;
 
 import com.facebook.drift.client.address.MockAddressSelector;
 import com.facebook.drift.client.stats.MethodInvocationStatsFactory;
+import com.facebook.drift.codec.ThriftCodecManager;
+import com.facebook.drift.transport.client.DriftClientConfig;
+import com.facebook.drift.transport.client.InvokeRequest;
+import com.facebook.drift.transport.client.MethodInvokerFactory;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -32,12 +36,8 @@ import io.airlift.drift.annotations.ThriftHeader;
 import io.airlift.drift.annotations.ThriftMethod;
 import io.airlift.drift.annotations.ThriftService;
 import io.airlift.drift.annotations.ThriftStruct;
-import io.airlift.drift.codec.ThriftCodecManager;
 import io.airlift.drift.protocol.TProtocolException;
 import io.airlift.drift.protocol.TTransportException;
-import com.facebook.drift.transport.client.DriftClientConfig;
-import com.facebook.drift.transport.client.InvokeRequest;
-import com.facebook.drift.transport.client.MethodInvokerFactory;
 import org.testng.annotations.Test;
 
 import javax.inject.Qualifier;

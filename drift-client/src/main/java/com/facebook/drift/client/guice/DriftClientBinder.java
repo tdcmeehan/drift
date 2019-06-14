@@ -35,8 +35,8 @@ import com.facebook.drift.client.address.AddressSelector;
 import com.facebook.drift.client.stats.JmxMethodInvocationStatsFactory;
 import com.facebook.drift.client.stats.MethodInvocationStatsFactory;
 import com.facebook.drift.client.stats.NullMethodInvocationStatsFactory;
-import io.airlift.drift.codec.ThriftCodecManager;
-import io.airlift.drift.codec.guice.ThriftCodecModule;
+import com.facebook.drift.codec.ThriftCodecManager;
+import com.facebook.drift.codec.guice.ThriftCodecModule;
 import com.facebook.drift.transport.client.DriftClientConfig;
 import com.facebook.drift.transport.client.MethodInvokerFactory;
 import org.weakref.jmx.MBeanExporter;
@@ -57,7 +57,7 @@ import static io.airlift.configuration.ConfigBinder.configBinder;
 import static com.facebook.drift.client.ExceptionClassifier.mergeExceptionClassifiers;
 import static com.facebook.drift.client.guice.DriftClientAnnotationFactory.extractDriftClientBindingAnnotation;
 import static com.facebook.drift.client.guice.DriftClientAnnotationFactory.getDriftClientAnnotation;
-import static io.airlift.drift.codec.metadata.ThriftServiceMetadata.getThriftServiceAnnotation;
+import static com.facebook.drift.codec.metadata.ThriftServiceMetadata.getThriftServiceAnnotation;
 import static java.util.Objects.requireNonNull;
 
 public class DriftClientBinder

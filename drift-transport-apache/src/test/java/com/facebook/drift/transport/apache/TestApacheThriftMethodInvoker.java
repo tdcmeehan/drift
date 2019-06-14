@@ -21,9 +21,9 @@ import com.google.common.collect.Iterables;
 import com.google.common.net.HostAndPort;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
-import io.airlift.drift.codec.ThriftCodec;
-import io.airlift.drift.codec.ThriftCodecManager;
-import io.airlift.drift.codec.metadata.ThriftType;
+import com.facebook.drift.codec.ThriftCodec;
+import com.facebook.drift.codec.ThriftCodecManager;
+import com.facebook.drift.codec.metadata.ThriftType;
 import com.facebook.drift.transport.MethodMetadata;
 import com.facebook.drift.transport.ParameterMetadata;
 import com.facebook.drift.transport.apache.client.ApacheThriftClientConfig;
@@ -60,8 +60,8 @@ import java.util.function.ToIntFunction;
 import java.util.stream.Collectors;
 
 import static com.google.common.collect.Lists.newArrayList;
-import static io.airlift.drift.codec.metadata.ThriftType.list;
-import static io.airlift.drift.codec.metadata.ThriftType.optional;
+import static com.facebook.drift.codec.metadata.ThriftType.list;
+import static com.facebook.drift.codec.metadata.ThriftType.optional;
 import static java.util.Collections.nCopies;
 import static org.testng.Assert.assertEquals;
 

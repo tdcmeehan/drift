@@ -26,7 +26,7 @@ import com.google.inject.Injector;
 import com.google.inject.Key;
 import com.google.inject.Module;
 import com.google.inject.multibindings.Multibinder;
-import io.airlift.drift.codec.guice.ThriftCodecModule;
+import com.facebook.drift.codec.guice.ThriftCodecModule;
 import com.facebook.drift.transport.server.DriftServerConfig;
 import org.weakref.jmx.MBeanExporter;
 
@@ -41,7 +41,7 @@ import static com.google.inject.Scopes.SINGLETON;
 import static com.google.inject.multibindings.Multibinder.newSetBinder;
 import static com.google.inject.multibindings.OptionalBinder.newOptionalBinder;
 import static io.airlift.configuration.ConfigBinder.configBinder;
-import static io.airlift.drift.codec.metadata.ThriftServiceMetadata.getThriftServiceAnnotation;
+import static com.facebook.drift.codec.metadata.ThriftServiceMetadata.getThriftServiceAnnotation;
 import static java.util.Objects.requireNonNull;
 
 public class DriftServerBinder

@@ -20,7 +20,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.client.address.AddressSelector;
 import com.facebook.drift.client.stats.MethodInvocationStat;
-import io.airlift.drift.codec.metadata.ThriftHeaderParameter;
+import com.facebook.drift.codec.metadata.ThriftHeaderParameter;
 import com.facebook.drift.transport.MethodMetadata;
 import com.facebook.drift.transport.client.Address;
 import com.facebook.drift.transport.client.MethodInvoker;
