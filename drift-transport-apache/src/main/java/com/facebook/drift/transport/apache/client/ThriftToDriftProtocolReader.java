@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.transport.apache.client;
+package com.facebook.drift.transport.apache.client;
 
 import io.airlift.drift.TException;
 import io.airlift.drift.protocol.TField;
 import io.airlift.drift.protocol.TList;
 import io.airlift.drift.protocol.TMap;
 import io.airlift.drift.protocol.TMessage;
-import io.airlift.drift.protocol.TProtocolWriter;
+import io.airlift.drift.protocol.TProtocolReader;
 import io.airlift.drift.protocol.TSet;
 import io.airlift.drift.protocol.TStruct;
 import org.apache.thrift.protocol.TProtocol;
@@ -29,22 +29,23 @@ import java.nio.ByteBuffer;
 
 import static java.util.Objects.requireNonNull;
 
-public class ThriftToDriftProtocolWriter
-        implements TProtocolWriter
+public class ThriftToDriftProtocolReader
+        implements TProtocolReader
 {
     private final TProtocol protocol;
 
-    public ThriftToDriftProtocolWriter(TProtocol protocol)
+    public ThriftToDriftProtocolReader(TProtocol protocol)
     {
         this.protocol = requireNonNull(protocol, "protocol is null");
     }
 
     @Override
-    public void writeMessageBegin(TMessage message)
+    public TMessage readMessageBegin()
             throws TException
     {
         try {
-            protocol.writeMessageBegin(new org.apache.thrift.protocol.TMessage(message.getName(), message.getType(), message.getSequenceId()));
+            org.apache.thrift.protocol.TMessage message = protocol.readMessageBegin();
+            return new TMessage(message.name, message.type, message.seqid);
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -52,11 +53,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeMessageEnd()
+    public void readMessageEnd()
             throws TException
     {
         try {
-            protocol.writeMessageEnd();
+            protocol.readMessageEnd();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -64,11 +65,12 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeStructBegin(TStruct struct)
+    public TStruct readStructBegin()
             throws TException
     {
         try {
-            protocol.writeStructBegin(new org.apache.thrift.protocol.TStruct(struct.getName()));
+            org.apache.thrift.protocol.TStruct struct = protocol.readStructBegin();
+            return new TStruct(struct.name);
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -76,11 +78,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeStructEnd()
+    public void readStructEnd()
             throws TException
     {
         try {
-            protocol.writeStructEnd();
+            protocol.readStructEnd();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -88,11 +90,12 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeFieldBegin(TField field)
+    public TField readFieldBegin()
             throws TException
     {
         try {
-            protocol.writeFieldBegin(new org.apache.thrift.protocol.TField(field.getName(), field.getType(), field.getId()));
+            org.apache.thrift.protocol.TField field = protocol.readFieldBegin();
+            return new TField(field.name, field.type, field.id);
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -100,11 +103,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeFieldEnd()
+    public void readFieldEnd()
             throws TException
     {
         try {
-            protocol.writeFieldEnd();
+            protocol.readFieldEnd();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -112,11 +115,12 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeFieldStop()
+    public TMap readMapBegin()
             throws TException
     {
         try {
-            protocol.writeFieldStop();
+            org.apache.thrift.protocol.TMap map = protocol.readMapBegin();
+            return new TMap(map.keyType, map.valueType, map.size);
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -124,11 +128,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeMapBegin(TMap map)
+    public void readMapEnd()
             throws TException
     {
         try {
-            protocol.writeMapBegin(new org.apache.thrift.protocol.TMap(map.getKeyType(), map.getValueType(), map.getSize()));
+            protocol.readMapEnd();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -136,11 +140,12 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeMapEnd()
+    public TList readListBegin()
             throws TException
     {
         try {
-            protocol.writeMapEnd();
+            org.apache.thrift.protocol.TList list = protocol.readListBegin();
+            return new TList(list.elemType, list.size);
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -148,11 +153,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeListBegin(TList list)
+    public void readListEnd()
             throws TException
     {
         try {
-            protocol.writeListBegin(new org.apache.thrift.protocol.TList(list.getType(), list.getSize()));
+            protocol.readListEnd();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -160,11 +165,12 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeListEnd()
+    public TSet readSetBegin()
             throws TException
     {
         try {
-            protocol.writeListEnd();
+            org.apache.thrift.protocol.TSet set = protocol.readSetBegin();
+            return new TSet(set.elemType, set.size);
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -172,11 +178,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeSetBegin(TSet set)
+    public void readSetEnd()
             throws TException
     {
         try {
-            protocol.writeSetBegin(new org.apache.thrift.protocol.TSet(set.getType(), set.getSize()));
+            protocol.readSetEnd();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -184,11 +190,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeSetEnd()
+    public boolean readBool()
             throws TException
     {
         try {
-            protocol.writeSetEnd();
+            return protocol.readBool();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -196,11 +202,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeBool(boolean value)
+    public byte readByte()
             throws TException
     {
         try {
-            protocol.writeBool(value);
+            return protocol.readByte();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -208,11 +214,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeByte(byte value)
+    public short readI16()
             throws TException
     {
         try {
-            protocol.writeByte(value);
+            return protocol.readI16();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -220,11 +226,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeI16(short value)
+    public int readI32()
             throws TException
     {
         try {
-            protocol.writeI16(value);
+            return protocol.readI32();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -232,11 +238,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeI32(int value)
+    public long readI64()
             throws TException
     {
         try {
-            protocol.writeI32(value);
+            return protocol.readI64();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -244,30 +250,18 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeI64(long value)
-            throws TException
-    {
-        try {
-            protocol.writeI64(value);
-        }
-        catch (org.apache.thrift.TException e) {
-            throw new TException(e);
-        }
-    }
-
-    @Override
-    public void writeFloat(float value)
+    public float readFloat()
             throws TException
     {
         throw new TException("float is not supported");
     }
 
     @Override
-    public void writeDouble(double value)
+    public double readDouble()
             throws TException
     {
         try {
-            protocol.writeDouble(value);
+            return protocol.readDouble();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -275,11 +269,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeString(String value)
+    public String readString()
             throws TException
     {
         try {
-            protocol.writeString(value);
+            return protocol.readString();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
@@ -287,11 +281,11 @@ public class ThriftToDriftProtocolWriter
     }
 
     @Override
-    public void writeBinary(ByteBuffer value)
+    public ByteBuffer readBinary()
             throws TException
     {
         try {
-            protocol.writeBinary(value);
+            return protocol.readBinary();
         }
         catch (org.apache.thrift.TException e) {
             throw new TException(e);
