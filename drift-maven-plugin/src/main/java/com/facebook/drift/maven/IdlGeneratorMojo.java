@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.maven;
+package com.facebook.drift.maven;
 
 import com.facebook.drift.idl.generator.ThriftIdlGenerator;
 import com.facebook.drift.idl.generator.ThriftIdlGeneratorConfig;
