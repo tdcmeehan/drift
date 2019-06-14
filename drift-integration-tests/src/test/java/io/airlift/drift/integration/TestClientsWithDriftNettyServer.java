@@ -19,7 +19,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Streams;
 import com.google.common.net.HostAndPort;
-import io.airlift.drift.client.MethodInvocationFilter;
+import com.facebook.drift.client.MethodInvocationFilter;
 import io.airlift.drift.codec.ThriftCodecManager;
 import io.airlift.drift.integration.scribe.drift.DriftScribeService;
 import io.airlift.drift.server.DriftServer;

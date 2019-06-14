@@ -20,7 +20,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.net.HostAndPort;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
-import io.airlift.drift.client.MethodInvocationFilter;
+import com.facebook.drift.client.MethodInvocationFilter;
 import io.airlift.drift.codec.ThriftCodec;
 import io.airlift.drift.codec.ThriftCodecManager;
 import io.airlift.drift.integration.scribe.apache.LogEntry;

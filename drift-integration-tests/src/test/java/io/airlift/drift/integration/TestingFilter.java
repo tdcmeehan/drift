@@ -16,7 +16,7 @@
 package io.airlift.drift.integration;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import io.airlift.drift.client.MethodInvocationFilter;
+import com.facebook.drift.client.MethodInvocationFilter;
 import io.airlift.drift.transport.client.InvokeRequest;
 import io.airlift.drift.transport.client.MethodInvoker;
 

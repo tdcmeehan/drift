@@ -17,7 +17,7 @@ package io.airlift.drift.integration;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.net.HostAndPort;
-import io.airlift.drift.client.MethodInvocationFilter;
+import com.facebook.drift.client.MethodInvocationFilter;
 import io.airlift.drift.integration.scribe.apache.ScribeService;
 import io.airlift.drift.integration.scribe.apache.scribe;
 import io.airlift.drift.transport.netty.codec.Protocol;

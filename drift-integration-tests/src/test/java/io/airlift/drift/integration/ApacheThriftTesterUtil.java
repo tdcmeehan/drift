@@ -17,10 +17,10 @@ package io.airlift.drift.integration;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.net.HostAndPort;
-import io.airlift.drift.client.DriftClientFactory;
-import io.airlift.drift.client.DriftClientFactoryManager;
-import io.airlift.drift.client.MethodInvocationFilter;
-import io.airlift.drift.client.address.AddressSelector;
+import com.facebook.drift.client.DriftClientFactory;
+import com.facebook.drift.client.DriftClientFactoryManager;
+import com.facebook.drift.client.MethodInvocationFilter;
+import com.facebook.drift.client.address.AddressSelector;
 import io.airlift.drift.integration.scribe.drift.DriftAsyncScribe;
 import io.airlift.drift.integration.scribe.drift.DriftLogEntry;
 import io.airlift.drift.integration.scribe.drift.DriftScribe;
@@ -36,7 +36,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.ToIntFunction;
 
-import static io.airlift.drift.client.ExceptionClassifier.NORMAL_RESULT;
+import static com.facebook.drift.client.ExceptionClassifier.NORMAL_RESULT;
 import static io.airlift.drift.integration.ClientTestUtils.CODEC_MANAGER;
 import static io.airlift.drift.integration.ClientTestUtils.DRIFT_MESSAGES;
 import static io.airlift.drift.integration.ClientTestUtils.DRIFT_OK;
