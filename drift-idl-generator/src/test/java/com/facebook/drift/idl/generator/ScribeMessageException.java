@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 Facebook, Inc.
+ * Copyright (C) 2017 Facebook, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,14 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.idl.generator;
+package com.facebook.drift.idl.generator;
 
-import io.airlift.drift.annotations.ThriftMethod;
-import io.airlift.drift.annotations.ThriftService;
+import io.airlift.drift.annotations.ThriftConstructor;
+import io.airlift.drift.annotations.ThriftField;
+import io.airlift.drift.annotations.ThriftStruct;
 
-@ThriftService(value = "renamed", idlName = "RenamedService")
-public interface RenamedService
+@ThriftStruct
+public class ScribeMessageException
+        extends Exception
 {
-    @ThriftMethod
-    void ping();
+    @ThriftConstructor
+    public ScribeMessageException(String message)
+    {
+        super(message);
+    }
+
+    @Override
+    @ThriftField(1)
+    public String getMessage()
+    {
+        return super.getMessage();
+    }
 }

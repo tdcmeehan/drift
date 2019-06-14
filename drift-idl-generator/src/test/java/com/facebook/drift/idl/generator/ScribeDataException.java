@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.idl.generator;
+package com.facebook.drift.idl.generator;
 
 import io.airlift.drift.annotations.ThriftConstructor;
 import io.airlift.drift.annotations.ThriftField;
 import io.airlift.drift.annotations.ThriftStruct;
 
 @ThriftStruct
-public class ScribeTransportException
+public class ScribeDataException
         extends Exception
 {
     @ThriftConstructor
-    public ScribeTransportException(String message)
+    public ScribeDataException(String message)
     {
         super(message);
     }

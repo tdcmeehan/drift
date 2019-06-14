@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.idl.generator;
+package com.facebook.drift.idl.generator;
 
 import com.google.common.base.VerifyException;
 import com.google.common.collect.ImmutableList;
@@ -48,7 +48,7 @@ import java.util.function.Predicate;
 import static com.google.common.base.MoreObjects.firstNonNull;
 import static com.google.common.io.Files.getNameWithoutExtension;
 import static io.airlift.drift.codec.metadata.ReflectionHelper.getEffectiveClassAnnotations;
-import static io.airlift.drift.idl.generator.ThriftIdlRenderer.renderThriftIdl;
+import static com.facebook.drift.idl.generator.ThriftIdlRenderer.renderThriftIdl;
 import static java.lang.String.format;
 import static java.util.Objects.requireNonNull;
 

@@ -13,26 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.idl.generator;
+package com.facebook.drift.idl.generator;
 
-import io.airlift.drift.annotations.ThriftConstructor;
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftStruct;
+import io.airlift.drift.annotations.ThriftDocumentation;
+import io.airlift.drift.annotations.ThriftEnum;
+import io.airlift.drift.annotations.ThriftEnumValue;
 
-@ThriftStruct
-public class ScribeMessageException
-        extends Exception
+@ThriftDocumentation("Type of fruit")
+@ThriftEnum
+public enum Fruit
 {
-    @ThriftConstructor
-    public ScribeMessageException(String message)
+    @ThriftDocumentation("Large and sweet")
+    APPLE(2),
+
+    @ThriftDocumentation("Yellow")
+    BANANA(3),
+
+    @ThriftDocumentation("Small and tart")
+    CHERRY(5);
+
+    private final int id;
+
+    Fruit(int id)
     {
-        super(message);
+        this.id = id;
     }
 
-    @Override
-    @ThriftField(1)
-    public String getMessage()
+    @ThriftEnumValue
+    public int getId()
     {
-        return super.getMessage();
+        return id;
     }
 }

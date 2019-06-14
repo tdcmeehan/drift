@@ -15,9 +15,9 @@
  */
 package io.airlift.drift.maven;
 
-import io.airlift.drift.idl.generator.ThriftIdlGenerator;
-import io.airlift.drift.idl.generator.ThriftIdlGeneratorConfig;
-import io.airlift.drift.idl.generator.ThriftIdlGeneratorException;
+import com.facebook.drift.idl.generator.ThriftIdlGenerator;
+import com.facebook.drift.idl.generator.ThriftIdlGeneratorConfig;
+import com.facebook.drift.idl.generator.ThriftIdlGeneratorException;
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;

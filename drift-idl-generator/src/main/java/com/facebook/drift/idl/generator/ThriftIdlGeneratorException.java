@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 Facebook, Inc.
+ * Copyright (C) 2017 Facebook, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,26 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.idl.generator;
+package com.facebook.drift.idl.generator;
 
-import io.airlift.drift.annotations.ThriftEnum;
-import io.airlift.drift.annotations.ThriftEnumValue;
-
-@ThriftEnum
-public enum Letter
+public class ThriftIdlGeneratorException
+        extends RuntimeException
 {
-    A(65), B(66), C(67), D(68);
-
-    private final int asciiValue;
-
-    Letter(int asciiValue)
+    public ThriftIdlGeneratorException(String message)
     {
-        this.asciiValue = asciiValue;
+        super(message);
     }
 
-    @ThriftEnumValue
-    public int getAsciiValue()
+    public ThriftIdlGeneratorException(Throwable cause)
     {
-        return asciiValue;
+        super(cause);
     }
 }

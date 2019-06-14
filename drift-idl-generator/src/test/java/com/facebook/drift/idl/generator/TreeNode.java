@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2012 Facebook, Inc.
+ * Copyright (C) 2017 Facebook, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,24 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.idl.generator;
+package com.facebook.drift.idl.generator;
 
 import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftUnion;
-import io.airlift.drift.annotations.ThriftUnionId;
+import io.airlift.drift.annotations.ThriftStruct;
 
-@ThriftUnion("Combined")
-public final class UnionField
+import static io.airlift.drift.annotations.ThriftField.Recursiveness.TRUE;
+
+@ThriftStruct
+public class TreeNode
 {
-    @ThriftField(1)
-    public String stringValue;
+    @ThriftField(value = 1, isRecursive = TRUE)
+    public TreeNode left;
 
-    @ThriftField(2)
-    public Long longValue;
+    @ThriftField(value = 2, isRecursive = TRUE)
+    public TreeNode right;
 
     @ThriftField(3)
-    public Fruit fruitValue;
-
-    @ThriftUnionId
-    public short id;
+    public String data;
 }

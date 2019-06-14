@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 Facebook, Inc.
+ * Copyright (C) 2012 Facebook, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,26 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.idl.generator;
+package com.facebook.drift.idl.generator;
 
 import io.airlift.drift.annotations.ThriftConstructor;
 import io.airlift.drift.annotations.ThriftField;
 import io.airlift.drift.annotations.ThriftStruct;
 
 @ThriftStruct
-public class ScribeDataException
-        extends Exception
+public final class DriftLogEntry
 {
+    private final String category;
+    private final String message;
+
     @ThriftConstructor
-    public ScribeDataException(String message)
+    public DriftLogEntry(
+            @ThriftField(name = "category") String category,
+            @ThriftField(name = "message") String message)
     {
-        super(message);
+        this.category = category;
+        this.message = message;
     }
 
-    @Override
     @ThriftField(1)
+    public String getCategory()
+    {
+        return category;
+    }
+
+    @ThriftField(2)
     public String getMessage()
     {
-        return super.getMessage();
+        return message;
     }
 }

@@ -13,17 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.idl.generator;
+package com.facebook.drift.idl.generator;
 
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftStruct;
+import io.airlift.drift.annotations.ThriftEnum;
+import io.airlift.drift.annotations.ThriftEnumValue;
 
-@ThriftStruct("Bonk")
-public final class BonkField
+@ThriftEnum
+public enum Letter
 {
-    @ThriftField(1)
-    public String message;
+    A(65), B(66), C(67), D(68);
 
-    @ThriftField(2)
-    public int type;
+    private final int asciiValue;
+
+    Letter(int asciiValue)
+    {
+        this.asciiValue = asciiValue;
+    }
+
+    @ThriftEnumValue
+    public int getAsciiValue()
+    {
+        return asciiValue;
+    }
 }

@@ -13,36 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.idl.generator;
+package com.facebook.drift.idl.generator;
 
-import io.airlift.drift.annotations.ThriftConstructor;
 import io.airlift.drift.annotations.ThriftField;
 import io.airlift.drift.annotations.ThriftStruct;
 
-@ThriftStruct
-public final class DriftLogEntry
+@ThriftStruct("Bonk")
+public final class BonkField
 {
-    private final String category;
-    private final String message;
-
-    @ThriftConstructor
-    public DriftLogEntry(
-            @ThriftField(name = "category") String category,
-            @ThriftField(name = "message") String message)
-    {
-        this.category = category;
-        this.message = message;
-    }
-
     @ThriftField(1)
-    public String getCategory()
-    {
-        return category;
-    }
+    public String message;
 
     @ThriftField(2)
-    public String getMessage()
-    {
-        return message;
-    }
+    public int type;
 }

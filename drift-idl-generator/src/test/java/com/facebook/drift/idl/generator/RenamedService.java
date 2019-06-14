@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 Facebook, Inc.
+ * Copyright (C) 2018 Facebook, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.idl.generator;
+package com.facebook.drift.idl.generator;
 
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftStruct;
+import io.airlift.drift.annotations.ThriftMethod;
+import io.airlift.drift.annotations.ThriftService;
 
-import static io.airlift.drift.annotations.ThriftField.Recursiveness.TRUE;
-
-@ThriftStruct
-public class TreeNode
+@ThriftService(value = "renamed", idlName = "RenamedService")
+public interface RenamedService
 {
-    @ThriftField(value = 1, isRecursive = TRUE)
-    public TreeNode left;
-
-    @ThriftField(value = 2, isRecursive = TRUE)
-    public TreeNode right;
-
-    @ThriftField(3)
-    public String data;
+    @ThriftMethod
+    void ping();
 }
