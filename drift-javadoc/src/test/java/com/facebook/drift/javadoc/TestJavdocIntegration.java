@@ -13,10 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.javadoc;
+package com.facebook.drift.javadoc;
 
-import com.google.common.io.Files;
-import com.google.common.io.Resources;
 import io.takari.maven.testing.TestResources;
 import io.takari.maven.testing.executor.MavenRuntime;
 import io.takari.maven.testing.executor.MavenRuntime.MavenRuntimeBuilder;
@@ -27,52 +25,55 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 
+import static com.google.common.io.Resources.asCharSource;
 import static com.google.common.io.Resources.getResource;
+import static com.facebook.drift.javadoc.ThriftAnnotations.META_SUFFIX;
 import static java.lang.String.format;
 import static java.nio.charset.StandardCharsets.UTF_8;
-import static org.junit.Assert.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(MavenJUnitTestRunner.class)
-@MavenVersions({"3.2.3", "3.3.9", "3.5.0", "3.5.2"})
+@MavenVersions({"3.2.3", "3.3.9", "3.5.0"})
 @SuppressWarnings("JUnitTestNG")
-public class TestIdlGeneratorIntegration
+public class TestJavdocIntegration
 {
     @Rule
     public final TestResources resources = new TestResources();
 
     private final MavenRuntime maven;
 
-    public TestIdlGeneratorIntegration(MavenRuntimeBuilder mavenBuilder)
+    public TestJavdocIntegration(MavenRuntimeBuilder mavenBuilder)
             throws Exception
     {
         this.maven = mavenBuilder.withCliOptions("-B", "-U").build();
     }
 
     @Test
-    public void testDirect()
+    public void testBasic()
             throws Exception
     {
-        assertGenerated("direct");
-    }
-
-    @Test
-    public void testRecursive()
-            throws Exception
-    {
-        assertGenerated("recursive");
-    }
-
-    private void assertGenerated(String testName)
-            throws Exception
-    {
-        File basedir = resources.getBasedir(testName);
+        File basedir = resources.getBasedir("basic");
         maven.forProject(basedir)
-                .execute("verify")
+                .execute("compile")
                 .assertErrorFreeLog();
 
-        String expected = Resources.toString(getResource(format("expected/%s.txt", testName)), UTF_8);
-        String actual = Files.asCharSource(new File(basedir, "target/test.thrift"), UTF_8).read();
-        assertEquals(expected, actual);
+        assertGenerated(basedir, "Fruit");
+        assertGenerated(basedir, "Point");
+        assertGenerated(basedir, "Response");
+        assertGenerated(basedir, "SimpleLogger");
+    }
+
+    private static void assertGenerated(File basedir, String name)
+            throws IOException
+    {
+        URL expected = getResource(format("basic/%s.txt", name));
+
+        name += META_SUFFIX;
+        assertThat(new File(basedir, format("target/classes/its/%s.class", name))).isFile();
+        assertThat(new File(basedir, format("target/generated-sources/annotations/its/%s.java", name)))
+                .usingCharset(UTF_8).hasContent(asCharSource(expected, UTF_8).read());
     }
 }

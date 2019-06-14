@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.javadoc;
+package com.facebook.drift.javadoc;
 
 import io.airlift.drift.annotations.ThriftDocumentation;
 import io.airlift.drift.annotations.ThriftField;
@@ -27,9 +27,9 @@ final class ThriftAnnotations
     public static final String THRIFT_FIELD = ThriftField.class.getName();
     public static final String THRIFT_METHOD = ThriftMethod.class.getName();
 
-    public static final String THRIFT_ENUM = "io.airlift.drift.annotations.ThriftEnum";
-    public static final String THRIFT_SERVICE = "io.airlift.drift.annotations.ThriftService";
-    public static final String THRIFT_STRUCT = "io.airlift.drift.annotations.ThriftStruct";
+    public static final String THRIFT_ENUM = "com.facebook.drift.annotations.ThriftEnum";
+    public static final String THRIFT_SERVICE = "com.facebook.drift.annotations.ThriftService";
+    public static final String THRIFT_STRUCT = "com.facebook.drift.annotations.ThriftStruct";
 
     public static final String META_SUFFIX = "$DriftMeta";
 

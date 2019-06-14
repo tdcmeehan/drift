@@ -13,16 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.javadoc;
+package com.facebook.drift.javadoc;
 
 import io.airlift.drift.annotations.ThriftEnum;
 import io.airlift.drift.annotations.ThriftService;
 import io.airlift.drift.annotations.ThriftStruct;
 import org.junit.Test;
 
-import static io.airlift.drift.javadoc.ThriftAnnotations.THRIFT_ENUM;
-import static io.airlift.drift.javadoc.ThriftAnnotations.THRIFT_SERVICE;
-import static io.airlift.drift.javadoc.ThriftAnnotations.THRIFT_STRUCT;
+import static com.facebook.drift.javadoc.ThriftAnnotations.THRIFT_ENUM;
+import static com.facebook.drift.javadoc.ThriftAnnotations.THRIFT_SERVICE;
+import static com.facebook.drift.javadoc.ThriftAnnotations.THRIFT_STRUCT;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class TestThriftAnnotations

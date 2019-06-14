@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.drift.javadoc;
+package com.facebook.drift.javadoc;
 
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.FieldSpec;
@@ -45,9 +45,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static io.airlift.drift.javadoc.ThriftAnnotations.META_SUFFIX;
-import static io.airlift.drift.javadoc.ThriftAnnotations.THRIFT_FIELD;
-import static io.airlift.drift.javadoc.ThriftAnnotations.THRIFT_METHOD;
+import static com.facebook.drift.javadoc.ThriftAnnotations.META_SUFFIX;
+import static com.facebook.drift.javadoc.ThriftAnnotations.THRIFT_FIELD;
+import static com.facebook.drift.javadoc.ThriftAnnotations.THRIFT_METHOD;
 import static java.lang.String.format;
 import static java.util.Collections.emptyList;
 import static java.util.stream.Collectors.toList;
