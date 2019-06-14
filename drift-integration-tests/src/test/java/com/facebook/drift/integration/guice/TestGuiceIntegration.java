@@ -45,7 +45,7 @@ import static com.facebook.drift.client.ExceptionClassification.NORMAL_EXCEPTION
 import static com.facebook.drift.client.address.SimpleAddressSelectorBinder.simpleAddressSelector;
 import static com.facebook.drift.client.guice.DriftClientBinder.driftClientBinder;
 import static com.facebook.drift.integration.guice.ThrowingService.MAX_FRAME_SIZE;
-import static io.airlift.drift.server.guice.DriftServerBinder.driftServerBinder;
+import static com.facebook.drift.server.guice.DriftServerBinder.driftServerBinder;
 import static java.lang.Math.toIntExact;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static java.util.Arrays.asList;
