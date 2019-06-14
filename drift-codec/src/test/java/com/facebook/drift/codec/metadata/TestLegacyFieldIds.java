@@ -16,10 +16,10 @@
 package com.facebook.drift.codec.metadata;
 
 import com.google.common.collect.ImmutableSet;
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftStruct;
-import io.airlift.drift.annotations.ThriftUnion;
-import io.airlift.drift.annotations.ThriftUnionId;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftUnion;
+import com.facebook.drift.annotations.ThriftUnionId;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Field;

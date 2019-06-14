@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.codec;
 
-import io.airlift.drift.annotations.ThriftConstructor;
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftConstructor;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftStruct;
 
 import javax.annotation.concurrent.Immutable;
 

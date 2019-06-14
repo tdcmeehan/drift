@@ -16,15 +16,15 @@
 package com.facebook.drift.codec.metadata;
 
 import com.google.common.reflect.TypeToken;
-import io.airlift.drift.annotations.ThriftConstructor;
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftConstructor;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftStruct;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Type;
 import java.util.concurrent.locks.Lock;
 
-import static io.airlift.drift.annotations.ThriftField.Requiredness;
+import static com.facebook.drift.annotations.ThriftField.Requiredness;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class TestThriftStructMetadataBuilder

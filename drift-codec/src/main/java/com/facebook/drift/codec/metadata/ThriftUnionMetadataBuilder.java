@@ -17,9 +17,9 @@ package com.facebook.drift.codec.metadata;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.airlift.drift.annotations.ThriftIdlAnnotation;
-import io.airlift.drift.annotations.ThriftUnion;
-import io.airlift.drift.annotations.ThriftUnionId;
+import com.facebook.drift.annotations.ThriftIdlAnnotation;
+import com.facebook.drift.annotations.ThriftUnion;
+import com.facebook.drift.annotations.ThriftUnionId;
 import com.facebook.drift.codec.metadata.ThriftStructMetadata.MetadataType;
 
 import javax.annotation.concurrent.NotThreadSafe;
@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import static io.airlift.drift.annotations.ThriftField.Requiredness;
+import static com.facebook.drift.annotations.ThriftField.Requiredness;
 import static com.facebook.drift.codec.metadata.FieldKind.THRIFT_UNION_ID;
 import static com.facebook.drift.codec.metadata.ReflectionHelper.findAnnotatedMethods;
 

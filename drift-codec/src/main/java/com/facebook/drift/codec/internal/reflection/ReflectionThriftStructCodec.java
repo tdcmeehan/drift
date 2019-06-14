@@ -23,14 +23,14 @@ import com.facebook.drift.codec.metadata.ThriftInjection;
 import com.facebook.drift.codec.metadata.ThriftMethodInjection;
 import com.facebook.drift.codec.metadata.ThriftParameterInjection;
 import com.facebook.drift.codec.metadata.ThriftStructMetadata;
-import io.airlift.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftField;
 import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.codec.internal.ProtocolReader;
 import com.facebook.drift.codec.internal.ProtocolWriter;
-import io.airlift.drift.protocol.TProtocolException;
-import io.airlift.drift.protocol.TProtocolReader;
-import io.airlift.drift.protocol.TProtocolWriter;
+import com.facebook.drift.protocol.TProtocolException;
+import com.facebook.drift.protocol.TProtocolReader;
+import com.facebook.drift.protocol.TProtocolWriter;
 
 import javax.annotation.concurrent.Immutable;
 

@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.codec.generics;
 
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftStruct;
 
 @ThriftStruct
 public final class GenericThriftStructField<T>

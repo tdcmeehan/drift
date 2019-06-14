@@ -16,8 +16,8 @@
 package com.facebook.drift.codec.metadata;
 
 import com.google.common.collect.ImmutableMap;
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftIdlAnnotation;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftIdlAnnotation;
 
 import javax.annotation.Nullable;
 
@@ -26,8 +26,8 @@ import java.util.Map;
 import java.util.Optional;
 
 import static com.google.common.base.Preconditions.checkArgument;
-import static io.airlift.drift.annotations.ThriftField.Requiredness;
-import static io.airlift.drift.annotations.ThriftIdlAnnotation.RECURSIVE_REFERENCE_ANNOTATION_KEY;
+import static com.facebook.drift.annotations.ThriftField.Requiredness;
+import static com.facebook.drift.annotations.ThriftIdlAnnotation.RECURSIVE_REFERENCE_ANNOTATION_KEY;
 import static java.util.Objects.requireNonNull;
 
 abstract class FieldMetadata

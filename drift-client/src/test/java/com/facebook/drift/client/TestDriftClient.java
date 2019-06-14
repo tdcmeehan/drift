@@ -15,9 +15,18 @@
  */
 package com.facebook.drift.client;
 
+import com.facebook.drift.TApplicationException;
+import com.facebook.drift.TException;
+import com.facebook.drift.annotations.ThriftException;
+import com.facebook.drift.annotations.ThriftHeader;
+import com.facebook.drift.annotations.ThriftMethod;
+import com.facebook.drift.annotations.ThriftService;
+import com.facebook.drift.annotations.ThriftStruct;
 import com.facebook.drift.client.address.MockAddressSelector;
 import com.facebook.drift.client.stats.MethodInvocationStatsFactory;
 import com.facebook.drift.codec.ThriftCodecManager;
+import com.facebook.drift.protocol.TProtocolException;
+import com.facebook.drift.protocol.TTransportException;
 import com.facebook.drift.transport.client.DriftClientConfig;
 import com.facebook.drift.transport.client.InvokeRequest;
 import com.facebook.drift.transport.client.MethodInvokerFactory;
@@ -29,15 +38,6 @@ import com.google.inject.Key;
 import com.google.inject.TypeLiteral;
 import io.airlift.bootstrap.Bootstrap;
 import io.airlift.bootstrap.LifeCycleManager;
-import io.airlift.drift.TApplicationException;
-import io.airlift.drift.TException;
-import io.airlift.drift.annotations.ThriftException;
-import io.airlift.drift.annotations.ThriftHeader;
-import io.airlift.drift.annotations.ThriftMethod;
-import io.airlift.drift.annotations.ThriftService;
-import io.airlift.drift.annotations.ThriftStruct;
-import io.airlift.drift.protocol.TProtocolException;
-import io.airlift.drift.protocol.TTransportException;
 import org.testng.annotations.Test;
 
 import javax.inject.Qualifier;

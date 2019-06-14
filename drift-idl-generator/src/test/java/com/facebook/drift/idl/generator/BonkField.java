@@ -15,8 +15,8 @@
  */
 package com.facebook.drift.idl.generator;
 
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftStruct;
 
 @ThriftStruct("Bonk")
 public final class BonkField

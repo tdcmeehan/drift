@@ -15,15 +15,15 @@
  */
 package com.facebook.drift.codec.internal;
 
-import io.airlift.drift.TException;
+import com.facebook.drift.TException;
 import com.facebook.drift.codec.ThriftCodec;
-import io.airlift.drift.protocol.TField;
-import io.airlift.drift.protocol.TList;
-import io.airlift.drift.protocol.TMap;
-import io.airlift.drift.protocol.TProtocolReader;
-import io.airlift.drift.protocol.TProtocolUtil;
-import io.airlift.drift.protocol.TSet;
-import io.airlift.drift.protocol.TType;
+import com.facebook.drift.protocol.TField;
+import com.facebook.drift.protocol.TList;
+import com.facebook.drift.protocol.TMap;
+import com.facebook.drift.protocol.TProtocolReader;
+import com.facebook.drift.protocol.TProtocolUtil;
+import com.facebook.drift.protocol.TSet;
+import com.facebook.drift.protocol.TType;
 
 import javax.annotation.concurrent.NotThreadSafe;
 

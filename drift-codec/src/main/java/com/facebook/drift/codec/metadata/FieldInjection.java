@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.codec.metadata;
 
-import io.airlift.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftField;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;

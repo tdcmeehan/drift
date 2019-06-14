@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.transport.client;
 
-import io.airlift.drift.protocol.TTransportException;
+import com.facebook.drift.protocol.TTransportException;
 
 public class RequestTimeoutException
         extends TTransportException

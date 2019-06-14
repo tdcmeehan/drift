@@ -15,10 +15,10 @@
  */
 package com.facebook.drift.javadoc;
 
-import io.airlift.drift.annotations.ThriftDocumentation;
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftMethod;
-import io.airlift.drift.annotations.ThriftOrder;
+import com.facebook.drift.annotations.ThriftDocumentation;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftMethod;
+import com.facebook.drift.annotations.ThriftOrder;
 
 final class ThriftAnnotations
 {

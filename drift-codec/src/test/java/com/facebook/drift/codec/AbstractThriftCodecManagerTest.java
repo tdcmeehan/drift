@@ -45,12 +45,12 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.reflect.TypeToken;
-import io.airlift.drift.protocol.TBinaryProtocol;
-import io.airlift.drift.protocol.TCompactProtocol;
-import io.airlift.drift.protocol.TFacebookCompactProtocol;
-import io.airlift.drift.protocol.TMemoryBuffer;
-import io.airlift.drift.protocol.TProtocol;
-import io.airlift.drift.protocol.TTransport;
+import com.facebook.drift.protocol.TBinaryProtocol;
+import com.facebook.drift.protocol.TCompactProtocol;
+import com.facebook.drift.protocol.TFacebookCompactProtocol;
+import com.facebook.drift.protocol.TMemoryBuffer;
+import com.facebook.drift.protocol.TProtocol;
+import com.facebook.drift.protocol.TTransport;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

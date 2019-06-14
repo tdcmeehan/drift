@@ -15,8 +15,8 @@
  */
 package com.facebook.drift.idl.generator;
 
-import io.airlift.drift.annotations.ThriftMethod;
-import io.airlift.drift.annotations.ThriftService;
+import com.facebook.drift.annotations.ThriftMethod;
+import com.facebook.drift.annotations.ThriftService;
 
 @ThriftService(value = "renamed", idlName = "RenamedService")
 public interface RenamedService

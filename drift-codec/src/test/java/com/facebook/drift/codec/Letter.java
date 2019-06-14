@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.codec;
 
-import io.airlift.drift.annotations.ThriftEnum;
-import io.airlift.drift.annotations.ThriftEnumUnknownValue;
-import io.airlift.drift.annotations.ThriftEnumValue;
+import com.facebook.drift.annotations.ThriftEnum;
+import com.facebook.drift.annotations.ThriftEnumUnknownValue;
+import com.facebook.drift.annotations.ThriftEnumValue;
 
 @ThriftEnum
 public enum Letter

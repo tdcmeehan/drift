@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.javadoc;
 
-import io.airlift.drift.annotations.ThriftEnum;
-import io.airlift.drift.annotations.ThriftService;
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftEnum;
+import com.facebook.drift.annotations.ThriftService;
+import com.facebook.drift.annotations.ThriftStruct;
 import org.junit.Test;
 
 import static com.facebook.drift.javadoc.ThriftAnnotations.THRIFT_ENUM;

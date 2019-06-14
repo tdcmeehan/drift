@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.transport.netty.codec;
 
-import io.airlift.drift.TException;
-import io.airlift.drift.protocol.TMessage;
-import io.airlift.drift.protocol.TProtocol;
+import com.facebook.drift.TException;
+import com.facebook.drift.protocol.TMessage;
+import com.facebook.drift.protocol.TProtocol;
 import com.facebook.drift.transport.netty.ssl.TChannelBufferInputTransport;
 import io.netty.buffer.ByteBuf;
 

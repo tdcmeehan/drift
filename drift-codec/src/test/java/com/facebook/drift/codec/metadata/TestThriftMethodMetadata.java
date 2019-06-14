@@ -16,13 +16,13 @@
 package com.facebook.drift.codec.metadata;
 
 import com.google.common.collect.ImmutableSet;
-import io.airlift.drift.TException;
-import io.airlift.drift.annotations.ThriftException;
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftHeader;
-import io.airlift.drift.annotations.ThriftId;
-import io.airlift.drift.annotations.ThriftMethod;
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.TException;
+import com.facebook.drift.annotations.ThriftException;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftHeader;
+import com.facebook.drift.annotations.ThriftId;
+import com.facebook.drift.annotations.ThriftMethod;
+import com.facebook.drift.annotations.ThriftStruct;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Method;

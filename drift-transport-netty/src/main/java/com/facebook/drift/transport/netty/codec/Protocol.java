@@ -15,11 +15,11 @@
  */
 package com.facebook.drift.transport.netty.codec;
 
-import io.airlift.drift.protocol.TBinaryProtocol;
-import io.airlift.drift.protocol.TCompactProtocol;
-import io.airlift.drift.protocol.TFacebookCompactProtocol;
-import io.airlift.drift.protocol.TProtocol;
-import io.airlift.drift.protocol.TTransport;
+import com.facebook.drift.protocol.TBinaryProtocol;
+import com.facebook.drift.protocol.TCompactProtocol;
+import com.facebook.drift.protocol.TFacebookCompactProtocol;
+import com.facebook.drift.protocol.TProtocol;
+import com.facebook.drift.protocol.TTransport;
 
 public enum Protocol
 {

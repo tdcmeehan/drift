@@ -15,14 +15,14 @@
  */
 package com.facebook.drift.transport.apache.client;
 
-import io.airlift.drift.TException;
-import io.airlift.drift.protocol.TField;
-import io.airlift.drift.protocol.TList;
-import io.airlift.drift.protocol.TMap;
-import io.airlift.drift.protocol.TMessage;
-import io.airlift.drift.protocol.TProtocolWriter;
-import io.airlift.drift.protocol.TSet;
-import io.airlift.drift.protocol.TStruct;
+import com.facebook.drift.TException;
+import com.facebook.drift.protocol.TField;
+import com.facebook.drift.protocol.TList;
+import com.facebook.drift.protocol.TMap;
+import com.facebook.drift.protocol.TMessage;
+import com.facebook.drift.protocol.TProtocolWriter;
+import com.facebook.drift.protocol.TSet;
+import com.facebook.drift.protocol.TStruct;
 import org.apache.thrift.protocol.TProtocol;
 
 import java.nio.ByteBuffer;

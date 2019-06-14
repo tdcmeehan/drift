@@ -21,7 +21,7 @@ import com.google.common.net.HostAndPort;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
-import io.airlift.drift.TApplicationException;
+import com.facebook.drift.TApplicationException;
 import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.codec.internal.builtin.VoidThriftCodec;
@@ -84,7 +84,7 @@ import static com.google.common.collect.Iterables.concat;
 import static com.google.common.collect.Iterables.getOnlyElement;
 import static com.google.common.collect.Lists.newArrayList;
 import static io.airlift.concurrent.Threads.daemonThreadsNamed;
-import static io.airlift.drift.TApplicationException.Type.UNSUPPORTED_CLIENT_TYPE;
+import static com.facebook.drift.TApplicationException.Type.UNSUPPORTED_CLIENT_TYPE;
 import static com.facebook.drift.codec.metadata.ThriftType.list;
 import static com.facebook.drift.codec.metadata.ThriftType.optional;
 import static com.facebook.drift.transport.netty.codec.Protocol.BINARY;
@@ -360,7 +360,7 @@ public class TestDriftNettyMethodInvoker
             fail("expected exception");
         }
         catch (ExecutionException e) {
-            assertInstanceOf(e.getCause(), io.airlift.drift.TException.class);
+            assertInstanceOf(e.getCause(), com.facebook.drift.TException.class);
             assertEquals(e.getCause().getMessage(), "Invocation response future did not complete after 41.00ms");
         }
         finally {
@@ -408,8 +408,8 @@ public class TestDriftNettyMethodInvoker
             }
             catch (ExecutionException e) {
                 Throwable cause = e.getCause();
-                assertInstanceOf(cause, io.airlift.drift.TApplicationException.class);
-                io.airlift.drift.TApplicationException applicationException = (io.airlift.drift.TApplicationException) cause;
+                assertInstanceOf(cause, TApplicationException.class);
+                TApplicationException applicationException = (TApplicationException) cause;
                 assertEquals(applicationException.getTypeValue(), UNSUPPORTED_CLIENT_TYPE.getType());
             }
             return 1;

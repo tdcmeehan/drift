@@ -20,10 +20,10 @@ import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
-import io.airlift.drift.TApplicationException;
-import io.airlift.drift.TException;
-import io.airlift.drift.protocol.TProtocolException;
-import io.airlift.drift.protocol.TTransportException;
+import com.facebook.drift.TApplicationException;
+import com.facebook.drift.TException;
+import com.facebook.drift.protocol.TProtocolException;
+import com.facebook.drift.protocol.TTransportException;
 import com.facebook.drift.transport.client.DriftApplicationException;
 
 import java.lang.reflect.InvocationHandler;
@@ -34,7 +34,7 @@ import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 
 import static com.google.common.util.concurrent.MoreExecutors.directExecutor;
-import static io.airlift.drift.TApplicationException.Type.UNKNOWN_METHOD;
+import static com.facebook.drift.TApplicationException.Type.UNKNOWN_METHOD;
 import static java.util.Arrays.asList;
 import static java.util.Objects.requireNonNull;
 

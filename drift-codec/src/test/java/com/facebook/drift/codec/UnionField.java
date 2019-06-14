@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.codec;
 
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftUnion;
-import io.airlift.drift.annotations.ThriftUnionId;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftUnion;
+import com.facebook.drift.annotations.ThriftUnionId;
 
 import java.util.Objects;
 

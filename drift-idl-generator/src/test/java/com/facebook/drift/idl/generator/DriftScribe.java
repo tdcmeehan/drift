@@ -15,11 +15,11 @@
  */
 package com.facebook.drift.idl.generator;
 
-import io.airlift.drift.annotations.ThriftDocumentation;
-import io.airlift.drift.annotations.ThriftId;
-import io.airlift.drift.annotations.ThriftMethod;
-import io.airlift.drift.annotations.ThriftOrder;
-import io.airlift.drift.annotations.ThriftService;
+import com.facebook.drift.annotations.ThriftDocumentation;
+import com.facebook.drift.annotations.ThriftId;
+import com.facebook.drift.annotations.ThriftMethod;
+import com.facebook.drift.annotations.ThriftOrder;
+import com.facebook.drift.annotations.ThriftService;
 
 import java.util.List;
 import java.util.Map;

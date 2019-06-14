@@ -15,12 +15,12 @@
  */
 package com.facebook.drift.idl.generator;
 
-import io.airlift.drift.annotations.ThriftDocumentation;
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftDocumentation;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftStruct;
 
-import static io.airlift.drift.annotations.ThriftField.Requiredness.OPTIONAL;
-import static io.airlift.drift.annotations.ThriftField.Requiredness.REQUIRED;
+import static com.facebook.drift.annotations.ThriftField.Requiredness.OPTIONAL;
+import static com.facebook.drift.annotations.ThriftField.Requiredness.REQUIRED;
 
 @ThriftDocumentation("Two dimensional point.")
 @ThriftStruct

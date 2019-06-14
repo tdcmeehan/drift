@@ -18,8 +18,8 @@ package com.facebook.drift.codec;
 import com.facebook.drift.codec.internal.ProtocolReader;
 import com.facebook.drift.codec.internal.ProtocolWriter;
 import com.facebook.drift.codec.metadata.ThriftType;
-import io.airlift.drift.protocol.TProtocolReader;
-import io.airlift.drift.protocol.TProtocolWriter;
+import com.facebook.drift.protocol.TProtocolReader;
+import com.facebook.drift.protocol.TProtocolWriter;
 
 public class OneOfEverythingThriftCodec
         implements ThriftCodec<OneOfEverything>

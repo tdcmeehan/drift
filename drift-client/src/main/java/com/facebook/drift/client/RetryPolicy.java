@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.client;
 
-import io.airlift.drift.protocol.TTransportException;
+import com.facebook.drift.protocol.TTransportException;
 import com.facebook.drift.transport.client.ConnectionFailedException;
 import com.facebook.drift.transport.client.DriftClientConfig;
 import com.facebook.drift.transport.client.MessageTooLargeException;

@@ -21,7 +21,7 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.reflect.TypeToken;
-import io.airlift.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftField;
 import io.airlift.parameternames.ParameterNames;
 
 import java.lang.annotation.Annotation;

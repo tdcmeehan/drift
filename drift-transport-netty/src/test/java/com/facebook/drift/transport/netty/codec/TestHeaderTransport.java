@@ -16,10 +16,10 @@
 package com.facebook.drift.transport.netty.codec;
 
 import com.google.common.collect.ImmutableMap;
-import io.airlift.drift.TException;
+import com.facebook.drift.TException;
 import com.facebook.drift.codec.internal.ProtocolWriter;
-import io.airlift.drift.protocol.TMessage;
-import io.airlift.drift.protocol.TProtocolWriter;
+import com.facebook.drift.protocol.TMessage;
+import com.facebook.drift.protocol.TProtocolWriter;
 import com.facebook.drift.transport.netty.buffer.TestingPooledByteBufAllocator;
 import com.facebook.drift.transport.netty.ssl.TChannelBufferOutputTransport;
 import io.netty.buffer.ByteBuf;
@@ -28,8 +28,8 @@ import org.testng.annotations.Test;
 
 import java.util.Optional;
 
-import static io.airlift.drift.protocol.TMessageType.CALL;
-import static io.airlift.drift.protocol.TMessageType.ONEWAY;
+import static com.facebook.drift.protocol.TMessageType.CALL;
+import static com.facebook.drift.protocol.TMessageType.ONEWAY;
 import static com.facebook.drift.transport.netty.codec.HeaderTransport.tryDecodeFrameInfo;
 import static com.facebook.drift.transport.netty.codec.Protocol.BINARY;
 import static com.facebook.drift.transport.netty.codec.Protocol.FB_COMPACT;

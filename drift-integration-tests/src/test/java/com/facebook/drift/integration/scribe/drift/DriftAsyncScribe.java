@@ -16,10 +16,10 @@
 package com.facebook.drift.integration.scribe.drift;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import io.airlift.drift.TException;
-import io.airlift.drift.annotations.ThriftHeader;
-import io.airlift.drift.annotations.ThriftMethod;
-import io.airlift.drift.annotations.ThriftService;
+import com.facebook.drift.TException;
+import com.facebook.drift.annotations.ThriftHeader;
+import com.facebook.drift.annotations.ThriftMethod;
+import com.facebook.drift.annotations.ThriftService;
 
 import java.util.List;
 

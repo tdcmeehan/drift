@@ -16,8 +16,8 @@
 package com.facebook.drift.transport.netty.codec;
 
 import com.google.common.collect.ImmutableMap;
-import io.airlift.drift.protocol.TMessage;
-import io.airlift.drift.protocol.TTransportException;
+import com.facebook.drift.protocol.TMessage;
+import com.facebook.drift.protocol.TTransportException;
 import com.facebook.drift.transport.netty.ssl.TChannelBufferInputTransport;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelDuplexHandler;

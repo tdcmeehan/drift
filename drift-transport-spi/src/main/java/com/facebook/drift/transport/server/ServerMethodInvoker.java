@@ -16,7 +16,7 @@
 package com.facebook.drift.transport.server;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import io.airlift.drift.TApplicationException;
+import com.facebook.drift.TApplicationException;
 import com.facebook.drift.transport.MethodMetadata;
 
 import java.util.Optional;

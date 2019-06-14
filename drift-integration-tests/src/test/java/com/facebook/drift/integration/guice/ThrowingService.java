@@ -16,9 +16,9 @@
 package com.facebook.drift.integration.guice;
 
 import com.google.common.util.concurrent.ListenableFuture;
-import io.airlift.drift.TException;
-import io.airlift.drift.annotations.ThriftMethod;
-import io.airlift.drift.annotations.ThriftService;
+import com.facebook.drift.TException;
+import com.facebook.drift.annotations.ThriftMethod;
+import com.facebook.drift.annotations.ThriftService;
 import io.airlift.units.DataSize;
 
 import static io.airlift.units.DataSize.Unit.KILOBYTE;

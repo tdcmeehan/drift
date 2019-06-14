@@ -16,8 +16,8 @@
 package com.facebook.drift.transport.netty.codec;
 
 import com.facebook.drift.codec.internal.ProtocolWriter;
-import io.airlift.drift.protocol.TMessage;
-import io.airlift.drift.protocol.TProtocolWriter;
+import com.facebook.drift.protocol.TMessage;
+import com.facebook.drift.protocol.TProtocolWriter;
 import com.facebook.drift.transport.netty.buffer.TestingPooledByteBufAllocator;
 import com.facebook.drift.transport.netty.ssl.TChannelBufferOutputTransport;
 import io.netty.buffer.ByteBuf;
@@ -32,8 +32,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.ThreadLocalRandom;
 
-import static io.airlift.drift.protocol.TMessageType.CALL;
-import static io.airlift.drift.protocol.TMessageType.ONEWAY;
+import static com.facebook.drift.protocol.TMessageType.CALL;
+import static com.facebook.drift.protocol.TMessageType.ONEWAY;
 import static com.facebook.drift.transport.netty.codec.Protocol.BINARY;
 import static com.facebook.drift.transport.netty.codec.Transport.FRAMED;
 import static org.assertj.core.api.Assertions.assertThat;

@@ -27,8 +27,8 @@ import java.util.Optional;
 
 import static com.google.common.base.MoreObjects.toStringHelper;
 import static com.google.common.base.Preconditions.checkArgument;
-import static io.airlift.drift.annotations.ThriftField.Requiredness;
-import static io.airlift.drift.annotations.ThriftIdlAnnotation.RECURSIVE_REFERENCE_ANNOTATION_KEY;
+import static com.facebook.drift.annotations.ThriftField.Requiredness;
+import static com.facebook.drift.annotations.ThriftIdlAnnotation.RECURSIVE_REFERENCE_ANNOTATION_KEY;
 import static java.util.Objects.requireNonNull;
 
 /**

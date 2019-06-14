@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.idl.generator;
 
-import io.airlift.drift.annotations.ThriftDocumentation;
-import io.airlift.drift.annotations.ThriftEnum;
-import io.airlift.drift.annotations.ThriftEnumValue;
+import com.facebook.drift.annotations.ThriftDocumentation;
+import com.facebook.drift.annotations.ThriftEnum;
+import com.facebook.drift.annotations.ThriftEnumValue;
 
 @ThriftDocumentation("Type of fruit")
 @ThriftEnum

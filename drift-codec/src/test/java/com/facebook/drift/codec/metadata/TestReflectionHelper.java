@@ -16,7 +16,7 @@
 package com.facebook.drift.codec.metadata;
 
 import com.google.common.collect.ImmutableList;
-import io.airlift.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftField;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

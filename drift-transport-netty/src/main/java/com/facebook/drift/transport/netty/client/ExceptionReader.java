@@ -15,11 +15,11 @@
  */
 package com.facebook.drift.transport.netty.client;
 
-import io.airlift.drift.TApplicationException;
-import io.airlift.drift.TException;
+import com.facebook.drift.TApplicationException;
+import com.facebook.drift.TException;
 import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.ThriftCodecManager;
-import io.airlift.drift.protocol.TProtocolReader;
+import com.facebook.drift.protocol.TProtocolReader;
 
 final class ExceptionReader
 {

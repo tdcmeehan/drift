@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.transport.netty.ssl;
 
-import io.airlift.drift.protocol.TTransport;
+import com.facebook.drift.protocol.TTransport;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.util.ReferenceCounted;

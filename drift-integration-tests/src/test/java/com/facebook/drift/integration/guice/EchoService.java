@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.integration.guice;
 
-import io.airlift.drift.annotations.ThriftMethod;
-import io.airlift.drift.annotations.ThriftService;
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftMethod;
+import com.facebook.drift.annotations.ThriftService;
+import com.facebook.drift.annotations.ThriftStruct;
 import com.facebook.drift.integration.scribe.drift.DriftLogEntry;
 
 import java.util.List;

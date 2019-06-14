@@ -17,8 +17,8 @@ package com.facebook.drift.codec.metadata;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import io.airlift.drift.annotations.ThriftEnumUnknownValue;
-import io.airlift.drift.annotations.ThriftEnumValue;
+import com.facebook.drift.annotations.ThriftEnumUnknownValue;
+import com.facebook.drift.annotations.ThriftEnumValue;
 
 import javax.annotation.concurrent.Immutable;
 

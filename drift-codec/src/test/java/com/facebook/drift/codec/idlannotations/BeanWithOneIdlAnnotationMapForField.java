@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.codec.idlannotations;
 
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftIdlAnnotation;
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftIdlAnnotation;
+import com.facebook.drift.annotations.ThriftStruct;
 
 @ThriftStruct
 public class BeanWithOneIdlAnnotationMapForField

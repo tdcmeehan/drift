@@ -16,7 +16,7 @@
 package com.facebook.drift.transport.netty.client;
 
 import com.google.common.net.HostAndPort;
-import io.airlift.drift.protocol.TTransportException;
+import com.facebook.drift.protocol.TTransportException;
 import com.facebook.drift.transport.netty.ssl.SslContextFactory;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBufAllocator;

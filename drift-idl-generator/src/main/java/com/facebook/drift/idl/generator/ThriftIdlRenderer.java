@@ -18,7 +18,7 @@ package com.facebook.drift.idl.generator;
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableList;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
-import io.airlift.drift.annotations.ThriftField.Requiredness;
+import com.facebook.drift.annotations.ThriftField.Requiredness;
 import com.facebook.drift.codec.ThriftProtocolType;
 import com.facebook.drift.codec.metadata.ThriftEnumMetadata;
 import com.facebook.drift.codec.metadata.ThriftFieldMetadata;

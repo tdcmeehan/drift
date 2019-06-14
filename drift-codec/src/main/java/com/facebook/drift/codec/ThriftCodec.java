@@ -16,8 +16,8 @@
 package com.facebook.drift.codec;
 
 import com.facebook.drift.codec.metadata.ThriftType;
-import io.airlift.drift.protocol.TProtocolReader;
-import io.airlift.drift.protocol.TProtocolWriter;
+import com.facebook.drift.protocol.TProtocolReader;
+import com.facebook.drift.protocol.TProtocolWriter;
 
 /**
  * <p>A single type codec for reading and writing in Thrift format.  Each codec is symmetric and

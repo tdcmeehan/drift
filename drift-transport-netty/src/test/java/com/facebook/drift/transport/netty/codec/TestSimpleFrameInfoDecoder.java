@@ -15,17 +15,17 @@
  */
 package com.facebook.drift.transport.netty.codec;
 
-import io.airlift.drift.TException;
+import com.facebook.drift.TException;
 import com.facebook.drift.codec.internal.ProtocolWriter;
-import io.airlift.drift.protocol.TMessage;
-import io.airlift.drift.protocol.TProtocolWriter;
+import com.facebook.drift.protocol.TMessage;
+import com.facebook.drift.protocol.TProtocolWriter;
 import com.facebook.drift.transport.netty.buffer.TestingPooledByteBufAllocator;
 import com.facebook.drift.transport.netty.ssl.TChannelBufferOutputTransport;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
 import org.testng.annotations.Test;
 
-import static io.airlift.drift.protocol.TMessageType.CALL;
+import static com.facebook.drift.protocol.TMessageType.CALL;
 import static com.facebook.drift.transport.netty.codec.Transport.FRAMED;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;

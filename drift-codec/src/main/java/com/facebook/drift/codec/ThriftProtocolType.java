@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.codec;
 
-import io.airlift.drift.protocol.TType;
+import com.facebook.drift.protocol.TType;
 
 public enum ThriftProtocolType
 {

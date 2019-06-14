@@ -15,10 +15,10 @@
  */
 package com.facebook.drift.idl.generator;
 
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftStruct;
 
-import static io.airlift.drift.annotations.ThriftField.Recursiveness.TRUE;
+import static com.facebook.drift.annotations.ThriftField.Recursiveness.TRUE;
 
 @ThriftStruct
 public class TreeNode

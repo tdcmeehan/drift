@@ -20,7 +20,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
-import io.airlift.drift.annotations.ThriftService;
+import com.facebook.drift.annotations.ThriftService;
 import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.codec.ThriftProtocolType;
 import com.facebook.drift.codec.metadata.FieldKind;

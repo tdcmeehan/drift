@@ -19,8 +19,8 @@ import com.facebook.drift.codec.metadata.ThriftType;
 import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.internal.ProtocolReader;
 import com.facebook.drift.codec.internal.ProtocolWriter;
-import io.airlift.drift.protocol.TProtocolReader;
-import io.airlift.drift.protocol.TProtocolWriter;
+import com.facebook.drift.protocol.TProtocolReader;
+import com.facebook.drift.protocol.TProtocolWriter;
 
 import javax.annotation.concurrent.Immutable;
 

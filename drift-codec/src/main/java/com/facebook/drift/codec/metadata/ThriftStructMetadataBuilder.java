@@ -18,8 +18,8 @@ package com.facebook.drift.codec.metadata;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Iterables;
-import io.airlift.drift.annotations.ThriftIdlAnnotation;
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftIdlAnnotation;
+import com.facebook.drift.annotations.ThriftStruct;
 import com.facebook.drift.codec.metadata.ThriftStructMetadata.MetadataType;
 
 import javax.annotation.concurrent.NotThreadSafe;
@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import static io.airlift.drift.annotations.ThriftField.Requiredness;
+import static com.facebook.drift.annotations.ThriftField.Requiredness;
 
 @NotThreadSafe
 public class ThriftStructMetadataBuilder

@@ -15,14 +15,14 @@
  */
 package com.facebook.drift.codec.recursion;
 
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftIdlAnnotation;
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftIdlAnnotation;
+import com.facebook.drift.annotations.ThriftStruct;
 
 import java.util.Objects;
 
-import static io.airlift.drift.annotations.ThriftField.Requiredness;
-import static io.airlift.drift.annotations.ThriftIdlAnnotation.RECURSIVE_REFERENCE_ANNOTATION_KEY;
+import static com.facebook.drift.annotations.ThriftField.Requiredness;
+import static com.facebook.drift.annotations.ThriftIdlAnnotation.RECURSIVE_REFERENCE_ANNOTATION_KEY;
 
 @ThriftStruct
 public class WithIdlRecursiveAnnotation

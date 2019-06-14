@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.client;
 
-import io.airlift.drift.TApplicationException;
+import com.facebook.drift.TApplicationException;
 
 /**
  * Wraps a {@link TApplicationException} with an unchecked exception.

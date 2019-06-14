@@ -15,13 +15,13 @@
  */
 package com.facebook.drift.codec.recursion;
 
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftStruct;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftStruct;
 
 import java.util.Objects;
 
-import static io.airlift.drift.annotations.ThriftField.Recursiveness;
-import static io.airlift.drift.annotations.ThriftField.Requiredness;
+import static com.facebook.drift.annotations.ThriftField.Recursiveness;
+import static com.facebook.drift.annotations.ThriftField.Requiredness;
 
 @ThriftStruct
 public class WithDriftRecursiveAnnotation

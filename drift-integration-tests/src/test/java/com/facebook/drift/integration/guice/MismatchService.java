@@ -15,8 +15,8 @@
  */
 package com.facebook.drift.integration.guice;
 
-import io.airlift.drift.annotations.ThriftMethod;
-import io.airlift.drift.annotations.ThriftService;
+import com.facebook.drift.annotations.ThriftMethod;
+import com.facebook.drift.annotations.ThriftService;
 
 @ThriftService("mismatch")
 public interface MismatchService

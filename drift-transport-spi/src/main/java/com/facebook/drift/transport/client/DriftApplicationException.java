@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.transport.client;
 
-import io.airlift.drift.TException;
+import com.facebook.drift.TException;
 
 import static java.util.Objects.requireNonNull;
 

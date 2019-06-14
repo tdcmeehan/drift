@@ -15,7 +15,7 @@
  */
 package com.facebook.drift.client;
 
-import io.airlift.drift.protocol.TProtocolException;
+import com.facebook.drift.protocol.TProtocolException;
 
 /**
  * Wraps a {@link TProtocolException} with an unchecked exception.

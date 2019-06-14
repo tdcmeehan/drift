@@ -25,10 +25,10 @@ import com.google.inject.Key;
 import com.google.inject.Stage;
 import com.google.inject.TypeLiteral;
 import com.facebook.drift.codec.BonkConstructor;
-import io.airlift.drift.protocol.TCompactProtocol;
-import io.airlift.drift.protocol.TMemoryBuffer;
-import io.airlift.drift.protocol.TProtocolReader;
-import io.airlift.drift.protocol.TProtocolWriter;
+import com.facebook.drift.protocol.TCompactProtocol;
+import com.facebook.drift.protocol.TMemoryBuffer;
+import com.facebook.drift.protocol.TProtocolReader;
+import com.facebook.drift.protocol.TProtocolWriter;
 import org.testng.annotations.Test;
 
 import java.util.List;

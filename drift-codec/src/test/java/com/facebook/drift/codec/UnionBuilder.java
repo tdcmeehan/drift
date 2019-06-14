@@ -16,10 +16,10 @@
 package com.facebook.drift.codec;
 
 import com.google.common.base.MoreObjects.ToStringHelper;
-import io.airlift.drift.annotations.ThriftConstructor;
-import io.airlift.drift.annotations.ThriftField;
-import io.airlift.drift.annotations.ThriftUnion;
-import io.airlift.drift.annotations.ThriftUnionId;
+import com.facebook.drift.annotations.ThriftConstructor;
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftUnion;
+import com.facebook.drift.annotations.ThriftUnionId;
 import com.facebook.drift.codec.UnionBuilder.Builder;
 
 import java.util.Objects;
