@@ -15,9 +15,6 @@
  */
 package com.facebook.drift.idl.generator;
 
-import com.google.common.base.Joiner;
-import com.google.common.collect.ImmutableList;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import com.facebook.drift.annotations.ThriftField.Requiredness;
 import com.facebook.drift.codec.ThriftProtocolType;
 import com.facebook.drift.codec.metadata.ThriftEnumMetadata;
@@ -26,6 +23,9 @@ import com.facebook.drift.codec.metadata.ThriftMethodMetadata;
 import com.facebook.drift.codec.metadata.ThriftServiceMetadata;
 import com.facebook.drift.codec.metadata.ThriftStructMetadata;
 import com.facebook.drift.codec.metadata.ThriftType;
+import com.google.common.base.Joiner;
+import com.google.common.collect.ImmutableList;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import java.util.Collection;
 import java.util.List;

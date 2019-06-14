@@ -15,10 +15,10 @@
  */
 package com.facebook.drift.server;
 
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.transport.MethodMetadata;
 import com.facebook.drift.transport.server.ServerInvokeRequest;
 import com.facebook.drift.transport.server.ServerTransport;
+import com.google.common.util.concurrent.ListenableFuture;
 
 import java.util.Map;
 import java.util.Optional;

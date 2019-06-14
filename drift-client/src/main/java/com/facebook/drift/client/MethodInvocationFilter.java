@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.client;
 
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.transport.client.InvokeRequest;
 import com.facebook.drift.transport.client.MethodInvoker;
+import com.google.common.util.concurrent.ListenableFuture;
 
 public interface MethodInvocationFilter
 {

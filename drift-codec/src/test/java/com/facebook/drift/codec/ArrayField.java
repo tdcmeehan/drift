@@ -15,14 +15,14 @@
  */
 package com.facebook.drift.codec;
 
+import com.facebook.drift.annotations.ThriftField;
+import com.facebook.drift.annotations.ThriftStruct;
 import com.google.common.collect.Maps;
 import com.google.common.primitives.Booleans;
 import com.google.common.primitives.Doubles;
 import com.google.common.primitives.Ints;
 import com.google.common.primitives.Longs;
 import com.google.common.primitives.Shorts;
-import com.facebook.drift.annotations.ThriftField;
-import com.facebook.drift.annotations.ThriftStruct;
 
 import java.util.Arrays;
 import java.util.List;

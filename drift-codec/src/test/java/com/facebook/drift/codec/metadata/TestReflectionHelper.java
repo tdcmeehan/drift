@@ -15,12 +15,10 @@
  */
 package com.facebook.drift.codec.metadata;
 
-import com.google.common.collect.ImmutableList;
 import com.facebook.drift.annotations.ThriftField;
+import com.google.common.collect.ImmutableList;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.assertEquals;
 
 public class TestReflectionHelper
 {

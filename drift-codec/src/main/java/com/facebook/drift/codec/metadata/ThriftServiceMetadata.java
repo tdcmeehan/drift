@@ -15,11 +15,11 @@
  */
 package com.facebook.drift.codec.metadata;
 
+import com.facebook.drift.annotations.ThriftMethod;
+import com.facebook.drift.annotations.ThriftService;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Ordering;
 import com.google.common.collect.TreeMultimap;
-import com.facebook.drift.annotations.ThriftMethod;
-import com.facebook.drift.annotations.ThriftService;
 
 import javax.annotation.concurrent.Immutable;
 
@@ -31,7 +31,6 @@ import java.util.Set;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
-import static com.facebook.drift.codec.metadata.ThriftCatalog.getThriftDocumentation;
 import static java.util.Objects.requireNonNull;
 import static java.util.function.Function.identity;
 

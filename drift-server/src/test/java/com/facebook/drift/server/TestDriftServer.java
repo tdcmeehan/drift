@@ -15,14 +15,6 @@
  */
 package com.facebook.drift.server;
 
-import com.google.common.base.Throwables;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.util.concurrent.Futures;
-import com.google.common.util.concurrent.ListenableFuture;
-import com.google.inject.Injector;
-import io.airlift.bootstrap.Bootstrap;
-import io.airlift.bootstrap.LifeCycleManager;
 import com.facebook.drift.TApplicationException;
 import com.facebook.drift.TException;
 import com.facebook.drift.annotations.ThriftException;
@@ -32,6 +24,14 @@ import com.facebook.drift.annotations.ThriftStruct;
 import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.server.stats.MethodInvocationStatsFactory;
 import com.facebook.drift.transport.server.ServerTransportFactory;
+import com.google.common.base.Throwables;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.util.concurrent.Futures;
+import com.google.common.util.concurrent.ListenableFuture;
+import com.google.inject.Injector;
+import io.airlift.bootstrap.Bootstrap;
+import io.airlift.bootstrap.LifeCycleManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -40,10 +40,10 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.Supplier;
 
+import static com.facebook.drift.server.guice.DriftServerBinder.driftServerBinder;
 import static com.google.common.util.concurrent.Futures.getDone;
 import static com.google.common.util.concurrent.MoreExecutors.directExecutor;
 import static com.google.inject.multibindings.OptionalBinder.newOptionalBinder;
-import static com.facebook.drift.server.guice.DriftServerBinder.driftServerBinder;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertSame;

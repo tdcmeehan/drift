@@ -15,14 +15,6 @@
  */
 package com.facebook.drift.integration;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.net.HostAndPort;
-import com.google.inject.Injector;
-import com.google.inject.Module;
-import com.google.inject.Scopes;
-import io.airlift.bootstrap.Bootstrap;
-import io.airlift.bootstrap.LifeCycleManager;
 import com.facebook.drift.client.DriftClient;
 import com.facebook.drift.client.MethodInvocationFilter;
 import com.facebook.drift.client.address.AddressSelector;
@@ -33,6 +25,14 @@ import com.facebook.drift.integration.scribe.drift.DriftResultCode;
 import com.facebook.drift.integration.scribe.drift.DriftScribe;
 import com.facebook.drift.transport.netty.codec.Protocol;
 import com.facebook.drift.transport.netty.codec.Transport;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.net.HostAndPort;
+import com.google.inject.Injector;
+import com.google.inject.Module;
+import com.google.inject.Scopes;
+import io.airlift.bootstrap.Bootstrap;
+import io.airlift.bootstrap.LifeCycleManager;
 import io.airlift.jmx.testing.TestingJmxModule;
 import org.weakref.jmx.guice.MBeanModule;
 

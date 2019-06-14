@@ -23,9 +23,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Optional;
 
+import static com.facebook.drift.transport.netty.codec.Transport.HEADER;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Verify.verify;
-import static com.facebook.drift.transport.netty.codec.Transport.HEADER;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public final class HeaderTransport

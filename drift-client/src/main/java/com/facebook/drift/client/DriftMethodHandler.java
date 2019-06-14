@@ -15,15 +15,15 @@
  */
 package com.facebook.drift.client;
 
-import com.google.common.base.Ticker;
-import com.google.common.collect.ImmutableList;
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.client.address.AddressSelector;
 import com.facebook.drift.client.stats.MethodInvocationStat;
 import com.facebook.drift.codec.metadata.ThriftHeaderParameter;
 import com.facebook.drift.transport.MethodMetadata;
 import com.facebook.drift.transport.client.Address;
 import com.facebook.drift.transport.client.MethodInvoker;
+import com.google.common.base.Ticker;
+import com.google.common.collect.ImmutableList;
+import com.google.common.util.concurrent.ListenableFuture;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -32,8 +32,8 @@ import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.Set;
 
-import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static com.facebook.drift.client.DriftMethodInvocation.createDriftMethodInvocation;
+import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static java.util.Objects.requireNonNull;
 import static java.util.function.Function.identity;
 

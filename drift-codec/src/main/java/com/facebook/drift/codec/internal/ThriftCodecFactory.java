@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.codec.internal;
 
-import com.facebook.drift.codec.metadata.ThriftStructMetadata;
 import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.ThriftCodecManager;
+import com.facebook.drift.codec.metadata.ThriftStructMetadata;
 
 /**
  * Implementations of this interface are expected to be thread safe.

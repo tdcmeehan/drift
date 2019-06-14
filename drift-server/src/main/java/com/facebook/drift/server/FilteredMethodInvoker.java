@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.server;
 
+import com.facebook.drift.transport.server.ServerInvokeRequest;
 import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.ListenableFuture;
-import com.facebook.drift.transport.server.ServerInvokeRequest;
 
 import java.util.List;
 

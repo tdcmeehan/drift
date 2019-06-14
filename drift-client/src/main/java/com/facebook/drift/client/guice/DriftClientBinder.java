@@ -15,17 +15,6 @@
  */
 package com.facebook.drift.client.guice;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.reflect.TypeParameter;
-import com.google.common.reflect.TypeToken;
-import com.google.inject.Binder;
-import com.google.inject.Injector;
-import com.google.inject.Key;
-import com.google.inject.Module;
-import com.google.inject.Provides;
-import com.google.inject.Scopes;
-import com.google.inject.TypeLiteral;
-import io.airlift.configuration.ConfigDefaults;
 import com.facebook.drift.client.DriftClient;
 import com.facebook.drift.client.DriftClientFactory;
 import com.facebook.drift.client.DriftClientFactoryManager;
@@ -39,6 +28,17 @@ import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.codec.guice.ThriftCodecModule;
 import com.facebook.drift.transport.client.DriftClientConfig;
 import com.facebook.drift.transport.client.MethodInvokerFactory;
+import com.google.common.collect.ImmutableList;
+import com.google.common.reflect.TypeParameter;
+import com.google.common.reflect.TypeToken;
+import com.google.inject.Binder;
+import com.google.inject.Injector;
+import com.google.inject.Key;
+import com.google.inject.Module;
+import com.google.inject.Provides;
+import com.google.inject.Scopes;
+import com.google.inject.TypeLiteral;
+import io.airlift.configuration.ConfigDefaults;
 import org.weakref.jmx.MBeanExporter;
 
 import javax.inject.Inject;
@@ -51,13 +51,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-import static com.google.inject.multibindings.Multibinder.newSetBinder;
-import static com.google.inject.multibindings.OptionalBinder.newOptionalBinder;
-import static io.airlift.configuration.ConfigBinder.configBinder;
 import static com.facebook.drift.client.ExceptionClassifier.mergeExceptionClassifiers;
 import static com.facebook.drift.client.guice.DriftClientAnnotationFactory.extractDriftClientBindingAnnotation;
 import static com.facebook.drift.client.guice.DriftClientAnnotationFactory.getDriftClientAnnotation;
 import static com.facebook.drift.codec.metadata.ThriftServiceMetadata.getThriftServiceAnnotation;
+import static com.google.inject.multibindings.Multibinder.newSetBinder;
+import static com.google.inject.multibindings.OptionalBinder.newOptionalBinder;
+import static io.airlift.configuration.ConfigBinder.configBinder;
 import static java.util.Objects.requireNonNull;
 
 public class DriftClientBinder

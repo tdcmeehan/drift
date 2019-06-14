@@ -15,7 +15,6 @@
  */
 package com.facebook.drift.transport.netty.client;
 
-import com.google.common.util.concurrent.AbstractFuture;
 import com.facebook.drift.TApplicationException;
 import com.facebook.drift.TException;
 import com.facebook.drift.codec.ThriftCodec;
@@ -38,6 +37,7 @@ import com.facebook.drift.transport.netty.codec.ThriftFrame;
 import com.facebook.drift.transport.netty.codec.Transport;
 import com.facebook.drift.transport.netty.ssl.TChannelBufferInputTransport;
 import com.facebook.drift.transport.netty.ssl.TChannelBufferOutputTransport;
+import com.google.common.util.concurrent.AbstractFuture;
 import io.airlift.units.Duration;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
@@ -58,7 +58,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
-import static com.google.common.base.Preconditions.checkArgument;
 import static com.facebook.drift.TApplicationException.Type.BAD_SEQUENCE_ID;
 import static com.facebook.drift.TApplicationException.Type.INVALID_MESSAGE_TYPE;
 import static com.facebook.drift.TApplicationException.Type.MISSING_RESULT;
@@ -67,6 +66,7 @@ import static com.facebook.drift.protocol.TMessageType.CALL;
 import static com.facebook.drift.protocol.TMessageType.EXCEPTION;
 import static com.facebook.drift.protocol.TMessageType.ONEWAY;
 import static com.facebook.drift.protocol.TMessageType.REPLY;
+import static com.google.common.base.Preconditions.checkArgument;
 import static java.lang.String.format;
 import static java.util.Objects.requireNonNull;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;

@@ -15,8 +15,6 @@
  */
 package com.facebook.drift.integration;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.net.HostAndPort;
 import com.facebook.drift.client.DriftClientFactory;
 import com.facebook.drift.client.DriftClientFactoryManager;
 import com.facebook.drift.client.MethodInvocationFilter;
@@ -32,6 +30,8 @@ import com.facebook.drift.transport.netty.client.DriftNettyConnectionFactoryConf
 import com.facebook.drift.transport.netty.client.DriftNettyMethodInvokerFactory;
 import com.facebook.drift.transport.netty.codec.Protocol;
 import com.facebook.drift.transport.netty.codec.Transport;
+import com.google.common.collect.ImmutableList;
+import com.google.common.net.HostAndPort;
 
 import java.util.List;
 import java.util.Optional;

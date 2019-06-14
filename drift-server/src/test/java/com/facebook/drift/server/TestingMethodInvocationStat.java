@@ -15,8 +15,8 @@
  */
 package com.facebook.drift.server;
 
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.server.stats.MethodInvocationStat;
+import com.google.common.util.concurrent.ListenableFuture;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;

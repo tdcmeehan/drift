@@ -15,8 +15,8 @@
  */
 package com.facebook.drift.codec.internal.builtin;
 
-import com.facebook.drift.codec.metadata.ThriftType;
 import com.facebook.drift.codec.ThriftCodec;
+import com.facebook.drift.codec.metadata.ThriftType;
 import com.facebook.drift.protocol.TProtocolReader;
 import com.facebook.drift.protocol.TProtocolWriter;
 

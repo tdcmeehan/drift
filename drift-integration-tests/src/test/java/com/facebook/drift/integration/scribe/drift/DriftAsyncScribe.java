@@ -15,11 +15,11 @@
  */
 package com.facebook.drift.integration.scribe.drift;
 
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.TException;
 import com.facebook.drift.annotations.ThriftHeader;
 import com.facebook.drift.annotations.ThriftMethod;
 import com.facebook.drift.annotations.ThriftService;
+import com.google.common.util.concurrent.ListenableFuture;
 
 import java.util.List;
 

@@ -15,12 +15,6 @@
  */
 package com.facebook.drift.transport.netty.server;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.primitives.Primitives;
-import com.google.common.util.concurrent.FluentFuture;
-import com.google.common.util.concurrent.FutureCallback;
-import com.google.common.util.concurrent.Futures;
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.TApplicationException;
 import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.internal.ProtocolReader;
@@ -41,6 +35,12 @@ import com.facebook.drift.transport.netty.ssl.TChannelBufferInputTransport;
 import com.facebook.drift.transport.netty.ssl.TChannelBufferOutputTransport;
 import com.facebook.drift.transport.server.ServerInvokeRequest;
 import com.facebook.drift.transport.server.ServerMethodInvoker;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.primitives.Primitives;
+import com.google.common.util.concurrent.FluentFuture;
+import com.google.common.util.concurrent.FutureCallback;
+import com.google.common.util.concurrent.Futures;
+import com.google.common.util.concurrent.ListenableFuture;
 import io.airlift.log.Logger;
 import io.airlift.units.Duration;
 import io.netty.channel.ChannelDuplexHandler;
@@ -58,17 +58,17 @@ import java.util.OptionalLong;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.regex.Pattern;
 
-import static com.google.common.base.Defaults.defaultValue;
-import static com.google.common.base.Strings.nullToEmpty;
-import static com.google.common.util.concurrent.Futures.immediateFailedFuture;
-import static com.google.common.util.concurrent.Futures.immediateFuture;
-import static com.google.common.util.concurrent.MoreExecutors.directExecutor;
 import static com.facebook.drift.TApplicationException.Type.INTERNAL_ERROR;
 import static com.facebook.drift.TApplicationException.Type.INVALID_MESSAGE_TYPE;
 import static com.facebook.drift.TApplicationException.Type.PROTOCOL_ERROR;
 import static com.facebook.drift.TApplicationException.Type.UNKNOWN_METHOD;
 import static com.facebook.drift.protocol.TMessageType.EXCEPTION;
 import static com.facebook.drift.protocol.TMessageType.REPLY;
+import static com.google.common.base.Defaults.defaultValue;
+import static com.google.common.base.Strings.nullToEmpty;
+import static com.google.common.util.concurrent.Futures.immediateFailedFuture;
+import static com.google.common.util.concurrent.Futures.immediateFuture;
+import static com.google.common.util.concurrent.MoreExecutors.directExecutor;
 import static java.util.Objects.requireNonNull;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.regex.Pattern.CASE_INSENSITIVE;

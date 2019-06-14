@@ -28,9 +28,9 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
+import static com.facebook.drift.javadoc.ThriftAnnotations.META_SUFFIX;
 import static com.google.common.io.Resources.asCharSource;
 import static com.google.common.io.Resources.getResource;
-import static com.facebook.drift.javadoc.ThriftAnnotations.META_SUFFIX;
 import static java.lang.String.format;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.assertj.core.api.Assertions.assertThat;

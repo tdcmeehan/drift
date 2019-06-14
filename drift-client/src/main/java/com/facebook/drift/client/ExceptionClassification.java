@@ -25,9 +25,9 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collector;
 
+import static com.facebook.drift.client.ExceptionClassification.HostStatus.NORMAL;
 import static com.google.common.base.MoreObjects.toStringHelper;
 import static com.google.common.collect.Ordering.natural;
-import static com.facebook.drift.client.ExceptionClassification.HostStatus.NORMAL;
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collector.Characteristics.CONCURRENT;
 import static java.util.stream.Collector.Characteristics.UNORDERED;

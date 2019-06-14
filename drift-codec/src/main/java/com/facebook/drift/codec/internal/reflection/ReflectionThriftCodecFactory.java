@@ -15,10 +15,10 @@
  */
 package com.facebook.drift.codec.internal.reflection;
 
-import com.facebook.drift.codec.metadata.ThriftStructMetadata;
 import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.codec.internal.ThriftCodecFactory;
+import com.facebook.drift.codec.metadata.ThriftStructMetadata;
 
 import javax.annotation.concurrent.Immutable;
 

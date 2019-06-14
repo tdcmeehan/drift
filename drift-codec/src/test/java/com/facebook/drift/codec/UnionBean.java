@@ -15,10 +15,10 @@
  */
 package com.facebook.drift.codec;
 
-import com.google.common.base.MoreObjects.ToStringHelper;
 import com.facebook.drift.annotations.ThriftField;
 import com.facebook.drift.annotations.ThriftUnion;
 import com.facebook.drift.annotations.ThriftUnionId;
+import com.google.common.base.MoreObjects.ToStringHelper;
 
 import java.util.Objects;
 

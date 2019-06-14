@@ -15,11 +15,11 @@
  */
 package com.facebook.drift.codec.metadata;
 
-import com.google.common.collect.ImmutableSet;
 import com.facebook.drift.annotations.ThriftField;
 import com.facebook.drift.annotations.ThriftStruct;
 import com.facebook.drift.annotations.ThriftUnion;
 import com.facebook.drift.annotations.ThriftUnionId;
+import com.google.common.collect.ImmutableSet;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Field;

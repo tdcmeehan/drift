@@ -15,8 +15,8 @@
  */
 package com.facebook.drift.client.guice;
 
-import com.google.inject.multibindings.Multibinder;
 import com.facebook.drift.client.ExceptionClassifier;
+import com.google.inject.multibindings.Multibinder;
 
 import java.lang.annotation.Annotation;
 

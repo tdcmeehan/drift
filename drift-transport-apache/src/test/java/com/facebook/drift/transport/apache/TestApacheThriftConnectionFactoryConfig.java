@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.transport.apache;
 
+import com.facebook.drift.transport.apache.client.ApacheThriftConnectionFactoryConfig;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.net.HostAndPort;
-import com.facebook.drift.transport.apache.client.ApacheThriftConnectionFactoryConfig;
 import org.testng.annotations.Test;
 
 import java.util.Map;

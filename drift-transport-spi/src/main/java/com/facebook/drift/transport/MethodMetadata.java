@@ -15,13 +15,13 @@
  */
 package com.facebook.drift.transport;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.reflect.TypeToken;
 import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.codec.metadata.ThriftMethodMetadata;
 import com.facebook.drift.codec.metadata.ThriftType;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.reflect.TypeToken;
 
 import java.util.List;
 import java.util.Map;

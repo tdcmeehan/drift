@@ -16,9 +16,9 @@
 package com.facebook.drift.codec;
 
 import com.facebook.drift.codec.metadata.ThriftType;
-import com.google.common.reflect.TypeToken;
 import com.facebook.drift.protocol.TProtocolReader;
 import com.facebook.drift.protocol.TProtocolWriter;
+import com.google.common.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 

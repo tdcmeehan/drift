@@ -15,11 +15,11 @@
  */
 package com.facebook.drift.client.guice;
 
-import com.google.inject.Binder;
-import com.google.inject.multibindings.Multibinder;
 import com.facebook.drift.client.ExceptionClassifier;
 import com.facebook.drift.client.MethodInvocationFilter;
 import com.facebook.drift.client.address.AddressSelector;
+import com.google.inject.Binder;
+import com.google.inject.multibindings.Multibinder;
 
 import java.lang.annotation.Annotation;
 

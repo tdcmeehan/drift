@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.codec.metadata;
 
+import com.facebook.drift.codec.ThriftProtocolType;
 import com.google.common.reflect.TypeParameter;
 import com.google.common.reflect.TypeToken;
-import com.facebook.drift.codec.ThriftProtocolType;
 
 import javax.annotation.concurrent.Immutable;
 

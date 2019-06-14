@@ -15,11 +15,6 @@
  */
 package com.facebook.drift.integration;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.net.HostAndPort;
-import com.google.common.util.concurrent.Futures;
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.client.MethodInvocationFilter;
 import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.ThriftCodecManager;
@@ -37,6 +32,11 @@ import com.facebook.drift.transport.netty.server.DriftNettyServerTransportFactor
 import com.facebook.drift.transport.server.ServerInvokeRequest;
 import com.facebook.drift.transport.server.ServerMethodInvoker;
 import com.facebook.drift.transport.server.ServerTransport;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.net.HostAndPort;
+import com.google.common.util.concurrent.Futures;
+import com.google.common.util.concurrent.ListenableFuture;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -45,15 +45,15 @@ import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.ToIntFunction;
 
-import static com.google.common.collect.Iterables.concat;
-import static com.google.common.collect.Iterables.getOnlyElement;
-import static com.google.common.collect.Lists.newArrayList;
 import static com.facebook.drift.codec.metadata.ThriftType.list;
 import static com.facebook.drift.integration.ApacheThriftTesterUtil.apacheThriftTestClients;
 import static com.facebook.drift.integration.ClientTestUtils.DRIFT_OK;
 import static com.facebook.drift.integration.ClientTestUtils.MESSAGES;
 import static com.facebook.drift.integration.DriftNettyTesterUtil.driftNettyTestClients;
 import static com.facebook.drift.integration.LegacyApacheThriftTesterUtil.legacyApacheThriftTestClients;
+import static com.google.common.collect.Iterables.concat;
+import static com.google.common.collect.Iterables.getOnlyElement;
+import static com.google.common.collect.Lists.newArrayList;
 import static java.util.Collections.nCopies;
 import static org.testng.Assert.assertEquals;
 

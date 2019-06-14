@@ -15,6 +15,11 @@
  */
 package com.facebook.drift.codec.internal.compiler;
 
+import com.facebook.drift.codec.ThriftCodec;
+import com.facebook.drift.codec.ThriftCodecManager;
+import com.facebook.drift.codec.ThriftProtocolType;
+import com.facebook.drift.codec.internal.ProtocolReader;
+import com.facebook.drift.codec.internal.ProtocolWriter;
 import com.facebook.drift.codec.metadata.DefaultThriftTypeReference;
 import com.facebook.drift.codec.metadata.FieldKind;
 import com.facebook.drift.codec.metadata.ReflectionHelper;
@@ -30,6 +35,8 @@ import com.facebook.drift.codec.metadata.ThriftParameterInjection;
 import com.facebook.drift.codec.metadata.ThriftStructMetadata;
 import com.facebook.drift.codec.metadata.ThriftType;
 import com.facebook.drift.codec.metadata.ThriftTypeReference;
+import com.facebook.drift.protocol.TProtocolReader;
+import com.facebook.drift.protocol.TProtocolWriter;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.reflect.TypeToken;
@@ -48,13 +55,6 @@ import io.airlift.bytecode.control.SwitchStatement.SwitchBuilder;
 import io.airlift.bytecode.control.WhileLoop;
 import io.airlift.bytecode.expression.BytecodeExpression;
 import io.airlift.bytecode.instruction.LabelNode;
-import com.facebook.drift.codec.ThriftCodec;
-import com.facebook.drift.codec.ThriftCodecManager;
-import com.facebook.drift.codec.ThriftProtocolType;
-import com.facebook.drift.codec.internal.ProtocolReader;
-import com.facebook.drift.codec.internal.ProtocolWriter;
-import com.facebook.drift.protocol.TProtocolReader;
-import com.facebook.drift.protocol.TProtocolWriter;
 
 import javax.annotation.concurrent.NotThreadSafe;
 
@@ -74,6 +74,19 @@ import java.util.OptionalLong;
 import java.util.Set;
 import java.util.TreeMap;
 
+import static com.facebook.drift.codec.ThriftProtocolType.BINARY;
+import static com.facebook.drift.codec.ThriftProtocolType.BOOL;
+import static com.facebook.drift.codec.ThriftProtocolType.BYTE;
+import static com.facebook.drift.codec.ThriftProtocolType.DOUBLE;
+import static com.facebook.drift.codec.ThriftProtocolType.ENUM;
+import static com.facebook.drift.codec.ThriftProtocolType.I16;
+import static com.facebook.drift.codec.ThriftProtocolType.I32;
+import static com.facebook.drift.codec.ThriftProtocolType.I64;
+import static com.facebook.drift.codec.ThriftProtocolType.LIST;
+import static com.facebook.drift.codec.ThriftProtocolType.MAP;
+import static com.facebook.drift.codec.ThriftProtocolType.SET;
+import static com.facebook.drift.codec.ThriftProtocolType.STRING;
+import static com.facebook.drift.codec.ThriftProtocolType.STRUCT;
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.Iterables.getOnlyElement;
 import static io.airlift.bytecode.Access.BRIDGE;
@@ -98,19 +111,6 @@ import static io.airlift.bytecode.expression.BytecodeExpressions.isNotNull;
 import static io.airlift.bytecode.expression.BytecodeExpressions.isNull;
 import static io.airlift.bytecode.expression.BytecodeExpressions.newArray;
 import static io.airlift.bytecode.expression.BytecodeExpressions.newInstance;
-import static com.facebook.drift.codec.ThriftProtocolType.BINARY;
-import static com.facebook.drift.codec.ThriftProtocolType.BOOL;
-import static com.facebook.drift.codec.ThriftProtocolType.BYTE;
-import static com.facebook.drift.codec.ThriftProtocolType.DOUBLE;
-import static com.facebook.drift.codec.ThriftProtocolType.ENUM;
-import static com.facebook.drift.codec.ThriftProtocolType.I16;
-import static com.facebook.drift.codec.ThriftProtocolType.I32;
-import static com.facebook.drift.codec.ThriftProtocolType.I64;
-import static com.facebook.drift.codec.ThriftProtocolType.LIST;
-import static com.facebook.drift.codec.ThriftProtocolType.MAP;
-import static com.facebook.drift.codec.ThriftProtocolType.SET;
-import static com.facebook.drift.codec.ThriftProtocolType.STRING;
-import static com.facebook.drift.codec.ThriftProtocolType.STRUCT;
 import static java.lang.String.format;
 import static java.util.stream.Collectors.joining;
 

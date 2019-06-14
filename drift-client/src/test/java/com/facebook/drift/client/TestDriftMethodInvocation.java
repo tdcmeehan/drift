@@ -15,13 +15,6 @@
  */
 package com.facebook.drift.client;
 
-import com.google.common.base.Ticker;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.net.HostAndPort;
-import com.google.common.util.concurrent.AbstractFuture;
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.TException;
 import com.facebook.drift.client.ExceptionClassification.HostStatus;
 import com.facebook.drift.client.address.AddressSelector;
@@ -34,6 +27,13 @@ import com.facebook.drift.transport.client.Address;
 import com.facebook.drift.transport.client.ConnectionFailedException;
 import com.facebook.drift.transport.client.DriftApplicationException;
 import com.facebook.drift.transport.client.DriftClientConfig;
+import com.google.common.base.Ticker;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.net.HostAndPort;
+import com.google.common.util.concurrent.AbstractFuture;
+import com.google.common.util.concurrent.ListenableFuture;
 import io.airlift.testing.TestingTicker;
 import io.airlift.units.Duration;
 import org.testng.annotations.Test;
@@ -50,15 +50,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Supplier;
 import java.util.stream.IntStream;
 
+import static com.facebook.drift.client.ExceptionClassification.HostStatus.DOWN;
+import static com.facebook.drift.client.ExceptionClassification.HostStatus.NORMAL;
+import static com.facebook.drift.client.ExceptionClassification.HostStatus.OVERLOADED;
+import static com.facebook.drift.client.TestDriftMethodInvocation.ClassifiedException.createClassifiedException;
 import static com.google.common.base.Ticker.systemTicker;
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.Sets.newConcurrentHashSet;
 import static com.google.common.util.concurrent.Futures.immediateFailedFuture;
 import static com.google.common.util.concurrent.Futures.immediateFuture;
-import static com.facebook.drift.client.ExceptionClassification.HostStatus.DOWN;
-import static com.facebook.drift.client.ExceptionClassification.HostStatus.NORMAL;
-import static com.facebook.drift.client.ExceptionClassification.HostStatus.OVERLOADED;
-import static com.facebook.drift.client.TestDriftMethodInvocation.ClassifiedException.createClassifiedException;
 import static java.util.Objects.requireNonNull;
 import static java.util.concurrent.TimeUnit.DAYS;
 import static java.util.concurrent.TimeUnit.SECONDS;

@@ -15,8 +15,8 @@
  */
 package com.facebook.drift.codec.internal.reflection;
 
-import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.codec.AbstractThriftCodecManagerTest;
+import com.facebook.drift.codec.ThriftCodecManager;
 import org.testng.annotations.Test;
 
 @Test

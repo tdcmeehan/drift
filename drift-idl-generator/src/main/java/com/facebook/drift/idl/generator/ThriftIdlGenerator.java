@@ -15,11 +15,6 @@
  */
 package com.facebook.drift.idl.generator;
 
-import com.google.common.base.VerifyException;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
-import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import com.facebook.drift.annotations.ThriftService;
 import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.codec.ThriftProtocolType;
@@ -34,6 +29,11 @@ import com.facebook.drift.codec.metadata.ThriftServiceMetadata;
 import com.facebook.drift.codec.metadata.ThriftStructMetadata;
 import com.facebook.drift.codec.metadata.ThriftType;
 import com.facebook.drift.codec.metadata.ThriftTypeReference;
+import com.google.common.base.VerifyException;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,10 +45,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import static com.google.common.base.MoreObjects.firstNonNull;
-import static com.google.common.io.Files.getNameWithoutExtension;
 import static com.facebook.drift.codec.metadata.ReflectionHelper.getEffectiveClassAnnotations;
 import static com.facebook.drift.idl.generator.ThriftIdlRenderer.renderThriftIdl;
+import static com.google.common.base.MoreObjects.firstNonNull;
+import static com.google.common.io.Files.getNameWithoutExtension;
 import static java.lang.String.format;
 import static java.util.Objects.requireNonNull;
 

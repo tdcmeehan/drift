@@ -15,11 +15,11 @@
  */
 package com.facebook.drift.server;
 
-import com.facebook.drift.server.stats.MethodInvocationStatsFactory;
-import com.google.common.collect.ImmutableList;
 import com.facebook.drift.codec.ThriftCodecManager;
+import com.facebook.drift.server.stats.MethodInvocationStatsFactory;
 import com.facebook.drift.transport.server.ServerTransport;
 import com.facebook.drift.transport.server.ServerTransportFactory;
+import com.google.common.collect.ImmutableList;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

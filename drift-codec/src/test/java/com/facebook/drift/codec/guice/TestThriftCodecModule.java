@@ -15,8 +15,13 @@
  */
 package com.facebook.drift.codec.guice;
 
+import com.facebook.drift.codec.BonkConstructor;
 import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.metadata.ThriftType;
+import com.facebook.drift.protocol.TCompactProtocol;
+import com.facebook.drift.protocol.TMemoryBuffer;
+import com.facebook.drift.protocol.TProtocolReader;
+import com.facebook.drift.protocol.TProtocolWriter;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.inject.Guice;
@@ -24,11 +29,6 @@ import com.google.inject.Injector;
 import com.google.inject.Key;
 import com.google.inject.Stage;
 import com.google.inject.TypeLiteral;
-import com.facebook.drift.codec.BonkConstructor;
-import com.facebook.drift.protocol.TCompactProtocol;
-import com.facebook.drift.protocol.TMemoryBuffer;
-import com.facebook.drift.protocol.TProtocolReader;
-import com.facebook.drift.protocol.TProtocolWriter;
 import org.testng.annotations.Test;
 
 import java.util.List;

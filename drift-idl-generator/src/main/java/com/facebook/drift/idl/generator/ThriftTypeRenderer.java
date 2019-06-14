@@ -15,8 +15,8 @@
  */
 package com.facebook.drift.idl.generator;
 
-import com.google.common.collect.ImmutableMap;
 import com.facebook.drift.codec.metadata.ThriftType;
+import com.google.common.collect.ImmutableMap;
 
 import java.util.Map;
 

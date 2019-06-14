@@ -15,12 +15,6 @@
  */
 package com.facebook.drift.transport.netty.server;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.net.HostAndPort;
-import com.google.common.util.concurrent.Futures;
-import com.google.common.util.concurrent.ListenableFuture;
-import com.google.common.util.concurrent.SettableFuture;
 import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.transport.MethodMetadata;
@@ -35,6 +29,12 @@ import com.facebook.drift.transport.netty.scribe.drift.DriftResultCode;
 import com.facebook.drift.transport.server.ServerInvokeRequest;
 import com.facebook.drift.transport.server.ServerMethodInvoker;
 import com.facebook.drift.transport.server.ServerTransport;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.net.HostAndPort;
+import com.google.common.util.concurrent.Futures;
+import com.google.common.util.concurrent.ListenableFuture;
+import com.google.common.util.concurrent.SettableFuture;
 import org.apache.thrift.TApplicationException;
 import org.apache.thrift.TException;
 import org.apache.thrift.protocol.TBinaryProtocol;
@@ -57,10 +57,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.ToIntFunction;
 import java.util.stream.Collectors;
 
+import static com.facebook.drift.codec.metadata.ThriftType.list;
 import static com.google.common.collect.Iterables.concat;
 import static com.google.common.collect.Iterables.getOnlyElement;
 import static com.google.common.collect.Lists.newArrayList;
-import static com.facebook.drift.codec.metadata.ThriftType.list;
 import static java.lang.String.format;
 import static java.util.Collections.nCopies;
 import static java.util.concurrent.TimeUnit.SECONDS;

@@ -15,10 +15,10 @@
  */
 package com.facebook.drift.codec.metadata;
 
-import com.google.common.reflect.TypeToken;
 import com.facebook.drift.annotations.ThriftConstructor;
 import com.facebook.drift.annotations.ThriftField;
 import com.facebook.drift.annotations.ThriftStruct;
+import com.google.common.reflect.TypeToken;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Type;

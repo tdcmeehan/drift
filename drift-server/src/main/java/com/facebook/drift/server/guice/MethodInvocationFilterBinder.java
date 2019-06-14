@@ -15,10 +15,10 @@
  */
 package com.facebook.drift.server.guice;
 
+import com.facebook.drift.server.MethodInvocationFilter;
 import com.google.common.collect.ImmutableList;
 import com.google.inject.Binder;
 import com.google.inject.multibindings.Multibinder;
-import com.facebook.drift.server.MethodInvocationFilter;
 
 import java.lang.annotation.Annotation;
 import java.util.List;

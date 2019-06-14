@@ -16,6 +16,7 @@
 package com.facebook.drift.codec.guice;
 
 import com.facebook.drift.codec.InternalThriftCodec;
+import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.codec.internal.ForCompiler;
 import com.facebook.drift.codec.internal.ThriftCodecFactory;
@@ -25,7 +26,6 @@ import com.google.inject.Binder;
 import com.google.inject.Module;
 import com.google.inject.Scopes;
 import com.google.inject.TypeLiteral;
-import com.facebook.drift.codec.ThriftCodec;
 
 import java.util.Objects;
 

@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.client.address;
 
+import com.facebook.drift.transport.client.Address;
 import com.google.common.collect.ImmutableList;
 import com.google.common.net.HostAndPort;
-import com.facebook.drift.transport.client.Address;
 
 import java.util.List;
 import java.util.Optional;

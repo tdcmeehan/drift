@@ -15,17 +15,17 @@
  */
 package com.facebook.drift.codec.metadata;
 
+import com.facebook.drift.codec.BonkBean;
+import com.facebook.drift.codec.BonkBuilder;
+import com.facebook.drift.codec.BonkConstructor;
+import com.facebook.drift.codec.BonkField;
+import com.facebook.drift.codec.BonkMethod;
 import com.facebook.drift.codec.idlannotations.BeanWIthConflictingIdlAnnotationMapsForField;
 import com.facebook.drift.codec.idlannotations.BeanWithMatchingIdlAnnotationsMapsForField;
 import com.facebook.drift.codec.idlannotations.BeanWithOneIdlAnnotationMapForField;
 import com.facebook.drift.codec.idlannotations.ExceptionWithIdlAnnotations;
 import com.facebook.drift.codec.idlannotations.StructWithIdlAnnotations;
 import com.facebook.drift.codec.idlannotations.UnionWithIdlAnnotations;
-import com.facebook.drift.codec.BonkBean;
-import com.facebook.drift.codec.BonkBuilder;
-import com.facebook.drift.codec.BonkConstructor;
-import com.facebook.drift.codec.BonkField;
-import com.facebook.drift.codec.BonkMethod;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Type;

@@ -20,8 +20,8 @@ import com.facebook.drift.annotations.ThriftField;
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 
-import static com.google.common.base.MoreObjects.toStringHelper;
 import static com.facebook.drift.codec.metadata.ReflectionHelper.resolveFieldType;
+import static com.google.common.base.MoreObjects.toStringHelper;
 
 class FieldInjection
         extends Injection

@@ -15,10 +15,6 @@
  */
 package com.facebook.drift.integration.guice;
 
-import com.google.common.util.concurrent.ListenableFuture;
-import com.google.inject.Injector;
-import io.airlift.bootstrap.Bootstrap;
-import io.airlift.bootstrap.LifeCycleManager;
 import com.facebook.drift.TApplicationException;
 import com.facebook.drift.TException;
 import com.facebook.drift.client.ExceptionClassification;
@@ -30,6 +26,10 @@ import com.facebook.drift.transport.client.MessageTooLargeException;
 import com.facebook.drift.transport.netty.buffer.TestingPooledByteBufAllocator;
 import com.facebook.drift.transport.netty.client.DriftNettyClientModule;
 import com.facebook.drift.transport.netty.server.DriftNettyServerModule;
+import com.google.common.util.concurrent.ListenableFuture;
+import com.google.inject.Injector;
+import io.airlift.bootstrap.Bootstrap;
+import io.airlift.bootstrap.LifeCycleManager;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -39,13 +39,13 @@ import java.util.OptionalDouble;
 import java.util.OptionalInt;
 import java.util.OptionalLong;
 
-import static com.google.common.util.concurrent.Futures.getUnchecked;
 import static com.facebook.drift.client.ExceptionClassification.HostStatus.NORMAL;
 import static com.facebook.drift.client.ExceptionClassification.NORMAL_EXCEPTION;
 import static com.facebook.drift.client.address.SimpleAddressSelectorBinder.simpleAddressSelector;
 import static com.facebook.drift.client.guice.DriftClientBinder.driftClientBinder;
 import static com.facebook.drift.integration.guice.ThrowingService.MAX_FRAME_SIZE;
 import static com.facebook.drift.server.guice.DriftServerBinder.driftServerBinder;
+import static com.google.common.util.concurrent.Futures.getUnchecked;
 import static java.lang.Math.toIntExact;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static java.util.Arrays.asList;

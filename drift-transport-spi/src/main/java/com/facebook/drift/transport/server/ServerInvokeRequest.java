@@ -15,8 +15,8 @@
  */
 package com.facebook.drift.transport.server;
 
-import com.google.common.collect.ImmutableMap;
 import com.facebook.drift.transport.MethodMetadata;
+import com.google.common.collect.ImmutableMap;
 
 import java.util.HashMap;
 import java.util.Map;

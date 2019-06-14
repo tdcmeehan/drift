@@ -21,23 +21,20 @@ import com.facebook.drift.codec.metadata.ThriftCatalog;
 import com.facebook.drift.codec.metadata.ThriftEnumMetadata;
 import com.facebook.drift.codec.metadata.ThriftEnumMetadataBuilder;
 import com.facebook.drift.codec.metadata.ThriftType;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
 import com.facebook.drift.protocol.TBinaryProtocol;
 import com.facebook.drift.protocol.TCompactProtocol;
 import com.facebook.drift.protocol.TFacebookCompactProtocol;
 import com.facebook.drift.protocol.TMemoryBuffer;
 import com.facebook.drift.protocol.TProtocol;
 import com.facebook.drift.protocol.TTransport;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.function.Function;
 
-import static com.facebook.drift.codec.metadata.ThriftType.list;
-import static com.facebook.drift.codec.metadata.ThriftType.map;
-import static com.facebook.drift.codec.metadata.ThriftType.set;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.fail;

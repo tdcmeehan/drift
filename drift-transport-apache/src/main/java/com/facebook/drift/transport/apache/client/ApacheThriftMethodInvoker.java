@@ -15,11 +15,6 @@
  */
 package com.facebook.drift.transport.apache.client;
 
-import com.google.common.net.HostAndPort;
-import com.google.common.primitives.Ints;
-import com.google.common.util.concurrent.ListenableFuture;
-import com.google.common.util.concurrent.ListeningExecutorService;
-import com.google.common.util.concurrent.ListeningScheduledExecutorService;
 import com.facebook.drift.TApplicationException;
 import com.facebook.drift.TException;
 import com.facebook.drift.codec.ThriftCodec;
@@ -35,6 +30,11 @@ import com.facebook.drift.transport.client.ConnectionFailedException;
 import com.facebook.drift.transport.client.DriftApplicationException;
 import com.facebook.drift.transport.client.InvokeRequest;
 import com.facebook.drift.transport.client.MethodInvoker;
+import com.google.common.net.HostAndPort;
+import com.google.common.primitives.Ints;
+import com.google.common.util.concurrent.ListenableFuture;
+import com.google.common.util.concurrent.ListeningExecutorService;
+import com.google.common.util.concurrent.ListeningScheduledExecutorService;
 import io.airlift.units.Duration;
 import org.apache.thrift.protocol.TMessage;
 import org.apache.thrift.protocol.TProtocol;
@@ -53,12 +53,12 @@ import java.net.SocketException;
 import java.util.List;
 import java.util.Optional;
 
-import static com.google.common.base.Throwables.throwIfUnchecked;
-import static com.google.common.util.concurrent.Futures.immediateFailedFuture;
 import static com.facebook.drift.TApplicationException.Type.BAD_SEQUENCE_ID;
 import static com.facebook.drift.TApplicationException.Type.INVALID_MESSAGE_TYPE;
 import static com.facebook.drift.TApplicationException.Type.MISSING_RESULT;
 import static com.facebook.drift.TApplicationException.Type.WRONG_METHOD_NAME;
+import static com.google.common.base.Throwables.throwIfUnchecked;
+import static com.google.common.util.concurrent.Futures.immediateFailedFuture;
 import static java.lang.String.format;
 import static java.net.Proxy.Type.SOCKS;
 import static java.util.Objects.requireNonNull;

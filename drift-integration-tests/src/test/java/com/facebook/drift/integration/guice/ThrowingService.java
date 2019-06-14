@@ -15,10 +15,10 @@
  */
 package com.facebook.drift.integration.guice;
 
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.TException;
 import com.facebook.drift.annotations.ThriftMethod;
 import com.facebook.drift.annotations.ThriftService;
+import com.google.common.util.concurrent.ListenableFuture;
 import io.airlift.units.DataSize;
 
 import static io.airlift.units.DataSize.Unit.KILOBYTE;

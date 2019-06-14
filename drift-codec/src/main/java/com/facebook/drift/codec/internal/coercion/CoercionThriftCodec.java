@@ -15,9 +15,9 @@
  */
 package com.facebook.drift.codec.internal.coercion;
 
+import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.codec.metadata.ThriftType;
 import com.facebook.drift.codec.metadata.TypeCoercion;
-import com.facebook.drift.codec.ThriftCodec;
 import com.facebook.drift.protocol.TProtocolReader;
 import com.facebook.drift.protocol.TProtocolWriter;
 

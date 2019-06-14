@@ -15,19 +15,19 @@
  */
 package com.facebook.drift.server.guice;
 
+import com.facebook.drift.codec.guice.ThriftCodecModule;
 import com.facebook.drift.server.DriftServer;
 import com.facebook.drift.server.DriftService;
 import com.facebook.drift.server.MethodInvocationFilter;
 import com.facebook.drift.server.stats.JmxMethodInvocationStatsFactory;
 import com.facebook.drift.server.stats.MethodInvocationStatsFactory;
 import com.facebook.drift.server.stats.NullMethodInvocationStatsFactory;
+import com.facebook.drift.transport.server.DriftServerConfig;
 import com.google.inject.Binder;
 import com.google.inject.Injector;
 import com.google.inject.Key;
 import com.google.inject.Module;
 import com.google.inject.multibindings.Multibinder;
-import com.facebook.drift.codec.guice.ThriftCodecModule;
-import com.facebook.drift.transport.server.DriftServerConfig;
 import org.weakref.jmx.MBeanExporter;
 
 import javax.inject.Inject;
@@ -36,12 +36,12 @@ import javax.inject.Provider;
 import java.lang.annotation.Annotation;
 import java.util.Optional;
 
+import static com.facebook.drift.codec.metadata.ThriftServiceMetadata.getThriftServiceAnnotation;
 import static com.google.common.base.Preconditions.checkState;
 import static com.google.inject.Scopes.SINGLETON;
 import static com.google.inject.multibindings.Multibinder.newSetBinder;
 import static com.google.inject.multibindings.OptionalBinder.newOptionalBinder;
 import static io.airlift.configuration.ConfigBinder.configBinder;
-import static com.facebook.drift.codec.metadata.ThriftServiceMetadata.getThriftServiceAnnotation;
 import static java.util.Objects.requireNonNull;
 
 public class DriftServerBinder

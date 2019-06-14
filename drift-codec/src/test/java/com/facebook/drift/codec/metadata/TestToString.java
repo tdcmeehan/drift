@@ -15,10 +15,10 @@
  */
 package com.facebook.drift.codec.metadata;
 
-import com.facebook.drift.codec.recursion.CoRecursive;
 import com.facebook.drift.codec.BonkBuilder;
 import com.facebook.drift.codec.OneOfEverything;
 import com.facebook.drift.codec.UnionBean;
+import com.facebook.drift.codec.recursion.CoRecursive;
 import com.facebook.drift.codec.recursion.CoRecursiveTree;
 import org.testng.annotations.Test;
 

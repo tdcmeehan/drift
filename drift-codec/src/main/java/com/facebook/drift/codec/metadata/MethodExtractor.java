@@ -20,9 +20,9 @@ import com.facebook.drift.annotations.ThriftField;
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 
-import static com.google.common.base.MoreObjects.toStringHelper;
 import static com.facebook.drift.codec.metadata.ReflectionHelper.extractFieldName;
 import static com.facebook.drift.codec.metadata.ReflectionHelper.resolveFieldType;
+import static com.google.common.base.MoreObjects.toStringHelper;
 
 class MethodExtractor
         extends Extractor

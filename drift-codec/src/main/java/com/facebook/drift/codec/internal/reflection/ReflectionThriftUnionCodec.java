@@ -15,6 +15,10 @@
  */
 package com.facebook.drift.codec.internal.reflection;
 
+import com.facebook.drift.codec.ThriftCodec;
+import com.facebook.drift.codec.ThriftCodecManager;
+import com.facebook.drift.codec.internal.ProtocolReader;
+import com.facebook.drift.codec.internal.ProtocolWriter;
 import com.facebook.drift.codec.metadata.FieldKind;
 import com.facebook.drift.codec.metadata.ThriftConstructorInjection;
 import com.facebook.drift.codec.metadata.ThriftFieldInjection;
@@ -22,13 +26,9 @@ import com.facebook.drift.codec.metadata.ThriftFieldMetadata;
 import com.facebook.drift.codec.metadata.ThriftInjection;
 import com.facebook.drift.codec.metadata.ThriftMethodInjection;
 import com.facebook.drift.codec.metadata.ThriftStructMetadata;
-import com.google.common.collect.Maps;
-import com.facebook.drift.codec.ThriftCodec;
-import com.facebook.drift.codec.ThriftCodecManager;
-import com.facebook.drift.codec.internal.ProtocolReader;
-import com.facebook.drift.codec.internal.ProtocolWriter;
 import com.facebook.drift.protocol.TProtocolReader;
 import com.facebook.drift.protocol.TProtocolWriter;
+import com.google.common.collect.Maps;
 
 import javax.annotation.concurrent.Immutable;
 

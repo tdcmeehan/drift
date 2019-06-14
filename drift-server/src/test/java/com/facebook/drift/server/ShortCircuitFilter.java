@@ -15,8 +15,8 @@
  */
 package com.facebook.drift.server;
 
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.transport.server.ServerInvokeRequest;
+import com.google.common.util.concurrent.ListenableFuture;
 
 import static org.testng.Assert.assertEquals;
 

@@ -45,14 +45,14 @@ import com.facebook.drift.codec.metadata.ThriftCatalog;
 import com.facebook.drift.codec.metadata.ThriftType;
 import com.facebook.drift.codec.metadata.ThriftTypeReference;
 import com.facebook.drift.codec.metadata.TypeCoercion;
+import com.facebook.drift.protocol.TProtocolReader;
+import com.facebook.drift.protocol.TProtocolWriter;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.reflect.TypeToken;
 import com.google.inject.Inject;
-import com.facebook.drift.protocol.TProtocolReader;
-import com.facebook.drift.protocol.TProtocolWriter;
 
 import javax.annotation.concurrent.ThreadSafe;
 

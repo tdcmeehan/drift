@@ -15,11 +15,11 @@
  */
 package com.facebook.drift.client.address;
 
+import com.facebook.drift.client.address.SimpleAddressSelector.SimpleAddress;
+import com.facebook.drift.transport.client.Address;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.net.HostAndPort;
-import com.facebook.drift.client.address.SimpleAddressSelector.SimpleAddress;
-import com.facebook.drift.transport.client.Address;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

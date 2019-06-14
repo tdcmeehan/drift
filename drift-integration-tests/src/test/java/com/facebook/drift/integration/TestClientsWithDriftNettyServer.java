@@ -15,10 +15,6 @@
  */
 package com.facebook.drift.integration;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Streams;
-import com.google.common.net.HostAndPort;
 import com.facebook.drift.client.MethodInvocationFilter;
 import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.integration.scribe.drift.DriftScribeService;
@@ -31,20 +27,24 @@ import com.facebook.drift.transport.netty.codec.Transport;
 import com.facebook.drift.transport.netty.server.DriftNettyServerConfig;
 import com.facebook.drift.transport.netty.server.DriftNettyServerTransport;
 import com.facebook.drift.transport.netty.server.DriftNettyServerTransportFactory;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Streams;
+import com.google.common.net.HostAndPort;
 import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 
-import static com.google.common.collect.Iterables.concat;
-import static com.google.common.collect.Lists.newArrayList;
 import static com.facebook.drift.integration.ApacheThriftTesterUtil.apacheThriftTestClients;
 import static com.facebook.drift.integration.ClientTestUtils.DRIFT_MESSAGES;
 import static com.facebook.drift.integration.ClientTestUtils.HEADER_VALUE;
 import static com.facebook.drift.integration.DriftNettyTesterUtil.driftNettyTestClients;
 import static com.facebook.drift.integration.LegacyApacheThriftTesterUtil.legacyApacheThriftTestClients;
 import static com.facebook.drift.transport.netty.codec.Transport.HEADER;
+import static com.google.common.collect.Iterables.concat;
+import static com.google.common.collect.Lists.newArrayList;
 import static java.util.Collections.nCopies;
 import static org.testng.Assert.assertEquals;
 

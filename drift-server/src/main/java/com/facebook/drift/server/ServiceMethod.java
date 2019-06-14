@@ -15,7 +15,6 @@
  */
 package com.facebook.drift.server;
 
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.codec.metadata.ThriftFieldMetadata;
 import com.facebook.drift.codec.metadata.ThriftHeaderParameter;
@@ -24,16 +23,17 @@ import com.facebook.drift.codec.metadata.ThriftMethodMetadata;
 import com.facebook.drift.codec.metadata.ThriftParameterInjection;
 import com.facebook.drift.transport.MethodMetadata;
 import com.facebook.drift.transport.server.ServerInvokeRequest;
+import com.google.common.util.concurrent.ListenableFuture;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 
+import static com.facebook.drift.server.FilteredMethodInvoker.createFilteredMethodInvoker;
+import static com.facebook.drift.transport.MethodMetadata.toMethodMetadata;
 import static com.google.common.base.MoreObjects.toStringHelper;
 import static com.google.common.util.concurrent.Futures.immediateFailedFuture;
 import static com.google.common.util.concurrent.Futures.immediateFuture;
-import static com.facebook.drift.server.FilteredMethodInvoker.createFilteredMethodInvoker;
-import static com.facebook.drift.transport.MethodMetadata.toMethodMetadata;
 import static java.util.Objects.requireNonNull;
 
 class ServiceMethod

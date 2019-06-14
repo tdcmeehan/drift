@@ -15,13 +15,13 @@
  */
 package com.facebook.drift.client.address;
 
+import com.facebook.drift.client.guice.AbstractAnnotatedProvider;
+import com.facebook.drift.client.guice.AddressSelectorBinder;
 import com.google.common.collect.ImmutableList;
 import com.google.common.net.HostAndPort;
 import com.google.inject.Binder;
 import com.google.inject.Injector;
 import com.google.inject.Key;
-import com.facebook.drift.client.guice.AbstractAnnotatedProvider;
-import com.facebook.drift.client.guice.AddressSelectorBinder;
 
 import java.lang.annotation.Annotation;
 import java.util.List;

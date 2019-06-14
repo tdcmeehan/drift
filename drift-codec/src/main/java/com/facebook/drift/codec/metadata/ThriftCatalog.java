@@ -15,11 +15,6 @@
  */
 package com.facebook.drift.codec.metadata;
 
-import com.google.common.annotations.VisibleForTesting;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Sets;
-import com.google.common.reflect.TypeToken;
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.annotations.ThriftDocumentation;
 import com.facebook.drift.annotations.ThriftOrder;
 import com.facebook.drift.annotations.ThriftStruct;
@@ -32,6 +27,11 @@ import com.facebook.drift.codec.internal.coercion.DefaultJavaCoercions;
 import com.facebook.drift.codec.internal.coercion.FromThrift;
 import com.facebook.drift.codec.internal.coercion.ToThrift;
 import com.facebook.drift.codec.metadata.MetadataErrors.Monitor;
+import com.google.common.annotations.VisibleForTesting;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Sets;
+import com.google.common.reflect.TypeToken;
+import com.google.common.util.concurrent.ListenableFuture;
 
 import javax.annotation.concurrent.ThreadSafe;
 
@@ -49,8 +49,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.stream.Stream;
 
-import static com.google.common.base.Preconditions.checkArgument;
-import static com.google.common.base.Preconditions.checkState;
 import static com.facebook.drift.codec.metadata.ReflectionHelper.getFutureReturnType;
 import static com.facebook.drift.codec.metadata.ReflectionHelper.getIterableType;
 import static com.facebook.drift.codec.metadata.ReflectionHelper.getMapKeyType;
@@ -73,6 +71,8 @@ import static com.facebook.drift.codec.metadata.ThriftType.map;
 import static com.facebook.drift.codec.metadata.ThriftType.optional;
 import static com.facebook.drift.codec.metadata.ThriftType.set;
 import static com.facebook.drift.codec.metadata.ThriftType.struct;
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkState;
 import static java.lang.reflect.Modifier.isStatic;
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.joining;

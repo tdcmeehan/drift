@@ -15,13 +15,13 @@
  */
 package com.facebook.drift.javadoc;
 
+import com.facebook.drift.annotations.ThriftDocumentation;
+import com.facebook.drift.annotations.ThriftOrder;
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;
-import com.facebook.drift.annotations.ThriftDocumentation;
-import com.facebook.drift.annotations.ThriftOrder;
 
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.Filer;

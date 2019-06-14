@@ -15,13 +15,13 @@
  */
 package com.facebook.drift.integration;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.net.HostAndPort;
 import com.facebook.drift.client.MethodInvocationFilter;
 import com.facebook.drift.integration.scribe.apache.ScribeService;
 import com.facebook.drift.integration.scribe.apache.scribe;
 import com.facebook.drift.transport.netty.codec.Protocol;
 import com.facebook.drift.transport.netty.codec.Transport;
+import com.google.common.collect.ImmutableList;
+import com.google.common.net.HostAndPort;
 import org.apache.thrift.TProcessor;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TCompactProtocol;
@@ -41,14 +41,14 @@ import javax.net.ssl.SSLServerSocket;
 import java.util.List;
 import java.util.function.ToIntFunction;
 
-import static com.google.common.collect.Iterables.concat;
-import static com.google.common.collect.Lists.newArrayList;
 import static com.facebook.drift.integration.ApacheThriftTesterUtil.apacheThriftTestClients;
 import static com.facebook.drift.integration.ClientTestUtils.MESSAGES;
 import static com.facebook.drift.integration.DriftNettyTesterUtil.driftNettyTestClients;
 import static com.facebook.drift.integration.LegacyApacheThriftTesterUtil.legacyApacheThriftTestClients;
 import static com.facebook.drift.transport.netty.codec.Protocol.FB_COMPACT;
 import static com.facebook.drift.transport.netty.codec.Transport.HEADER;
+import static com.google.common.collect.Iterables.concat;
+import static com.google.common.collect.Lists.newArrayList;
 import static java.util.Collections.nCopies;
 import static org.testng.Assert.assertEquals;
 

@@ -15,11 +15,6 @@
  */
 package com.facebook.drift.codec.metadata;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableSet;
-import com.google.common.reflect.TypeToken;
-import com.google.common.util.concurrent.ListenableFuture;
 import com.facebook.drift.TException;
 import com.facebook.drift.annotations.ThriftException;
 import com.facebook.drift.annotations.ThriftField;
@@ -28,6 +23,11 @@ import com.facebook.drift.annotations.ThriftId;
 import com.facebook.drift.annotations.ThriftIdlAnnotation;
 import com.facebook.drift.annotations.ThriftMethod;
 import com.facebook.drift.annotations.ThriftStruct;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableSet;
+import com.google.common.reflect.TypeToken;
+import com.google.common.util.concurrent.ListenableFuture;
 
 import javax.annotation.concurrent.Immutable;
 
@@ -45,10 +45,9 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Stream;
 
-import static com.google.common.base.Preconditions.checkArgument;
 import static com.facebook.drift.annotations.ThriftField.Requiredness;
 import static com.facebook.drift.codec.metadata.ReflectionHelper.extractParameterNames;
-import static com.facebook.drift.codec.metadata.ThriftCatalog.getThriftDocumentation;
+import static com.google.common.base.Preconditions.checkArgument;
 import static java.util.Arrays.stream;
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.toList;

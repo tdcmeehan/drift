@@ -15,14 +15,14 @@
  */
 package com.facebook.drift.integration;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.net.HostAndPort;
 import com.facebook.drift.client.MethodInvocationFilter;
 import com.facebook.drift.integration.scribe.apache.LogEntry;
 import com.facebook.drift.integration.scribe.apache.ResultCode;
 import com.facebook.drift.integration.scribe.apache.scribe;
 import com.facebook.drift.transport.netty.codec.Protocol;
 import com.facebook.drift.transport.netty.codec.Transport;
+import com.google.common.collect.ImmutableList;
+import com.google.common.net.HostAndPort;
 import org.apache.thrift.TException;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TCompactProtocol;

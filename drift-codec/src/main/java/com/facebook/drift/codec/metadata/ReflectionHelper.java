@@ -15,13 +15,13 @@
  */
 package com.facebook.drift.codec.metadata;
 
+import com.facebook.drift.annotations.ThriftField;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.reflect.TypeToken;
-import com.facebook.drift.annotations.ThriftField;
 import io.airlift.parameternames.ParameterNames;
 
 import java.lang.annotation.Annotation;

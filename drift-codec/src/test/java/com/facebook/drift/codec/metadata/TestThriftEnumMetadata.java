@@ -15,11 +15,11 @@
  */
 package com.facebook.drift.codec.metadata;
 
-import com.google.common.collect.ImmutableMap;
 import com.facebook.drift.annotations.ThriftEnum;
 import com.facebook.drift.annotations.ThriftEnumUnknownValue;
 import com.facebook.drift.annotations.ThriftEnumValue;
 import com.facebook.drift.codec.Letter;
+import com.google.common.collect.ImmutableMap;
 import org.testng.annotations.Test;
 
 import java.util.Optional;

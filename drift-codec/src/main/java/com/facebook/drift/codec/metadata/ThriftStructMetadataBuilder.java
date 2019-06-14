@@ -15,12 +15,12 @@
  */
 package com.facebook.drift.codec.metadata;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Iterables;
 import com.facebook.drift.annotations.ThriftIdlAnnotation;
 import com.facebook.drift.annotations.ThriftStruct;
 import com.facebook.drift.codec.metadata.ThriftStructMetadata.MetadataType;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Iterables;
 
 import javax.annotation.concurrent.NotThreadSafe;
 

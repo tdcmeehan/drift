@@ -15,6 +15,8 @@
  */
 package com.facebook.drift.codec.internal.reflection;
 
+import com.facebook.drift.codec.ThriftCodec;
+import com.facebook.drift.codec.ThriftCodecManager;
 import com.facebook.drift.codec.metadata.FieldKind;
 import com.facebook.drift.codec.metadata.ThriftExtraction;
 import com.facebook.drift.codec.metadata.ThriftFieldExtractor;
@@ -23,8 +25,6 @@ import com.facebook.drift.codec.metadata.ThriftMethodExtractor;
 import com.facebook.drift.codec.metadata.ThriftStructMetadata;
 import com.facebook.drift.codec.metadata.ThriftType;
 import com.google.common.collect.ImmutableSortedMap;
-import com.facebook.drift.codec.ThriftCodec;
-import com.facebook.drift.codec.ThriftCodecManager;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.SortedMap;
