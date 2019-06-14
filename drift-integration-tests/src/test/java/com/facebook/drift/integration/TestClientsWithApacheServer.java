@@ -20,8 +20,8 @@ import com.google.common.net.HostAndPort;
 import com.facebook.drift.client.MethodInvocationFilter;
 import com.facebook.drift.integration.scribe.apache.ScribeService;
 import com.facebook.drift.integration.scribe.apache.scribe;
-import io.airlift.drift.transport.netty.codec.Protocol;
-import io.airlift.drift.transport.netty.codec.Transport;
+import com.facebook.drift.transport.netty.codec.Protocol;
+import com.facebook.drift.transport.netty.codec.Transport;
 import org.apache.thrift.TProcessor;
 import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TCompactProtocol;
@@ -47,8 +47,8 @@ import static com.facebook.drift.integration.ApacheThriftTesterUtil.apacheThrift
 import static com.facebook.drift.integration.ClientTestUtils.MESSAGES;
 import static com.facebook.drift.integration.DriftNettyTesterUtil.driftNettyTestClients;
 import static com.facebook.drift.integration.LegacyApacheThriftTesterUtil.legacyApacheThriftTestClients;
-import static io.airlift.drift.transport.netty.codec.Protocol.FB_COMPACT;
-import static io.airlift.drift.transport.netty.codec.Transport.HEADER;
+import static com.facebook.drift.transport.netty.codec.Protocol.FB_COMPACT;
+import static com.facebook.drift.transport.netty.codec.Transport.HEADER;
 import static java.util.Collections.nCopies;
 import static org.testng.Assert.assertEquals;
 

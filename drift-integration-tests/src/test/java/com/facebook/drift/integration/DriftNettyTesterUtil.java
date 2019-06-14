@@ -25,13 +25,13 @@ import com.facebook.drift.integration.scribe.drift.DriftAsyncScribe;
 import com.facebook.drift.integration.scribe.drift.DriftLogEntry;
 import com.facebook.drift.integration.scribe.drift.DriftScribe;
 import io.airlift.drift.transport.client.DriftClientConfig;
-import io.airlift.drift.transport.netty.buffer.TestingPooledByteBufAllocator;
-import io.airlift.drift.transport.netty.client.DriftNettyClientConfig;
-import io.airlift.drift.transport.netty.client.DriftNettyClientModule;
-import io.airlift.drift.transport.netty.client.DriftNettyConnectionFactoryConfig;
-import io.airlift.drift.transport.netty.client.DriftNettyMethodInvokerFactory;
-import io.airlift.drift.transport.netty.codec.Protocol;
-import io.airlift.drift.transport.netty.codec.Transport;
+import com.facebook.drift.transport.netty.buffer.TestingPooledByteBufAllocator;
+import com.facebook.drift.transport.netty.client.DriftNettyClientConfig;
+import com.facebook.drift.transport.netty.client.DriftNettyClientModule;
+import com.facebook.drift.transport.netty.client.DriftNettyConnectionFactoryConfig;
+import com.facebook.drift.transport.netty.client.DriftNettyMethodInvokerFactory;
+import com.facebook.drift.transport.netty.codec.Protocol;
+import com.facebook.drift.transport.netty.codec.Transport;
 
 import java.util.List;
 import java.util.Optional;
@@ -43,9 +43,9 @@ import static com.facebook.drift.integration.ClientTestUtils.DRIFT_MESSAGES;
 import static com.facebook.drift.integration.ClientTestUtils.DRIFT_OK;
 import static com.facebook.drift.integration.ClientTestUtils.HEADER_VALUE;
 import static com.facebook.drift.integration.ClientTestUtils.logDriftClientBinder;
-import static io.airlift.drift.transport.netty.client.DriftNettyMethodInvokerFactory.createStaticDriftNettyMethodInvokerFactory;
-import static io.airlift.drift.transport.netty.codec.Protocol.COMPACT;
-import static io.airlift.drift.transport.netty.codec.Transport.HEADER;
+import static com.facebook.drift.transport.netty.client.DriftNettyMethodInvokerFactory.createStaticDriftNettyMethodInvokerFactory;
+import static com.facebook.drift.transport.netty.codec.Protocol.COMPACT;
+import static com.facebook.drift.transport.netty.codec.Transport.HEADER;
 import static org.testng.Assert.assertEquals;
 
 final class DriftNettyTesterUtil

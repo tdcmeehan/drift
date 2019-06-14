@@ -29,8 +29,8 @@ import com.facebook.drift.transport.apache.client.ApacheThriftClientModule;
 import com.facebook.drift.transport.apache.client.ApacheThriftConnectionFactoryConfig;
 import com.facebook.drift.transport.apache.client.ApacheThriftMethodInvokerFactory;
 import io.airlift.drift.transport.client.DriftClientConfig;
-import io.airlift.drift.transport.netty.codec.Protocol;
-import io.airlift.drift.transport.netty.codec.Transport;
+import com.facebook.drift.transport.netty.codec.Protocol;
+import com.facebook.drift.transport.netty.codec.Transport;
 
 import java.util.List;
 import java.util.Optional;
@@ -43,8 +43,8 @@ import static com.facebook.drift.integration.ClientTestUtils.DRIFT_OK;
 import static com.facebook.drift.integration.ClientTestUtils.HEADER_VALUE;
 import static com.facebook.drift.integration.ClientTestUtils.logDriftClientBinder;
 import static com.facebook.drift.transport.apache.client.ApacheThriftMethodInvokerFactory.createStaticApacheThriftMethodInvokerFactory;
-import static io.airlift.drift.transport.netty.codec.Protocol.FB_COMPACT;
-import static io.airlift.drift.transport.netty.codec.Transport.HEADER;
+import static com.facebook.drift.transport.netty.codec.Protocol.FB_COMPACT;
+import static com.facebook.drift.transport.netty.codec.Transport.HEADER;
 import static org.testng.Assert.assertEquals;
 
 final class ApacheThriftTesterUtil

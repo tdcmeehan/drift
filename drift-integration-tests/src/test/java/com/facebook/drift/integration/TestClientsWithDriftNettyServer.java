@@ -25,12 +25,12 @@ import com.facebook.drift.integration.scribe.drift.DriftScribeService;
 import com.facebook.drift.server.DriftServer;
 import com.facebook.drift.server.DriftService;
 import com.facebook.drift.server.stats.NullMethodInvocationStatsFactory;
-import io.airlift.drift.transport.netty.buffer.TestingPooledByteBufAllocator;
-import io.airlift.drift.transport.netty.codec.Protocol;
-import io.airlift.drift.transport.netty.codec.Transport;
-import io.airlift.drift.transport.netty.server.DriftNettyServerConfig;
-import io.airlift.drift.transport.netty.server.DriftNettyServerTransport;
-import io.airlift.drift.transport.netty.server.DriftNettyServerTransportFactory;
+import com.facebook.drift.transport.netty.buffer.TestingPooledByteBufAllocator;
+import com.facebook.drift.transport.netty.codec.Protocol;
+import com.facebook.drift.transport.netty.codec.Transport;
+import com.facebook.drift.transport.netty.server.DriftNettyServerConfig;
+import com.facebook.drift.transport.netty.server.DriftNettyServerTransport;
+import com.facebook.drift.transport.netty.server.DriftNettyServerTransportFactory;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -44,7 +44,7 @@ import static com.facebook.drift.integration.ClientTestUtils.DRIFT_MESSAGES;
 import static com.facebook.drift.integration.ClientTestUtils.HEADER_VALUE;
 import static com.facebook.drift.integration.DriftNettyTesterUtil.driftNettyTestClients;
 import static com.facebook.drift.integration.LegacyApacheThriftTesterUtil.legacyApacheThriftTestClients;
-import static io.airlift.drift.transport.netty.codec.Transport.HEADER;
+import static com.facebook.drift.transport.netty.codec.Transport.HEADER;
 import static java.util.Collections.nCopies;
 import static org.testng.Assert.assertEquals;
 

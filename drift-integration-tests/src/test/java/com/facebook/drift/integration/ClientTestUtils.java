@@ -31,8 +31,8 @@ import com.facebook.drift.integration.scribe.apache.LogEntry;
 import com.facebook.drift.integration.scribe.drift.DriftLogEntry;
 import com.facebook.drift.integration.scribe.drift.DriftResultCode;
 import com.facebook.drift.integration.scribe.drift.DriftScribe;
-import io.airlift.drift.transport.netty.codec.Protocol;
-import io.airlift.drift.transport.netty.codec.Transport;
+import com.facebook.drift.transport.netty.codec.Protocol;
+import com.facebook.drift.transport.netty.codec.Transport;
 import io.airlift.jmx.testing.TestingJmxModule;
 import org.weakref.jmx.guice.MBeanModule;
 
