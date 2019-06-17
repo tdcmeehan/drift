@@ -15,11 +15,11 @@
 
     <name>drift-root</name>
     <description>Annotation based Thrift implementation</description>
-    <url>https://github.com/airlift/drift</url>
+    <url>https://github.com/prestodb/drift</url>
 
     <scm>
         <connection>scm:git:git://github.com/airlift/drift.git</connection>
-        <url>https://github.com/airlift/drift</url>
+        <url>https://github.com/prestodb/drift</url>
         <tag>HEAD</tag>
     </scm>
 
