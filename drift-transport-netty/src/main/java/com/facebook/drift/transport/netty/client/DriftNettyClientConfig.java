@@ -37,7 +37,7 @@ import static io.airlift.units.DataSize.Unit.MEGABYTE;
 import static java.util.Objects.requireNonNull;
 import static java.util.concurrent.TimeUnit.DAYS;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
-import static java.util.concurrent.TimeUnit.MINUTES;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class DriftNettyClientConfig
 {
@@ -46,7 +46,7 @@ public class DriftNettyClientConfig
     private DataSize maxFrameSize = new DataSize(16, MEGABYTE);
 
     private Duration connectTimeout = new Duration(500, MILLISECONDS);
-    private Duration requestTimeout = new Duration(1, MINUTES);
+    private Duration requestTimeout = new Duration(10, SECONDS);
 
     private HostAndPort socksProxy;
 
