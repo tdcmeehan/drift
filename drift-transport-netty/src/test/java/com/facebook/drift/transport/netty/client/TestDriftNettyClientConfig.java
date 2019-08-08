@@ -36,6 +36,7 @@ import static java.util.concurrent.TimeUnit.DAYS;
 import static java.util.concurrent.TimeUnit.HOURS;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.MINUTES;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class TestDriftNettyClientConfig
 {
@@ -46,7 +47,7 @@ public class TestDriftNettyClientConfig
                 .setTransport(FRAMED)
                 .setProtocol(BINARY)
                 .setConnectTimeout(new Duration(500, MILLISECONDS))
-                .setRequestTimeout(new Duration(1, MINUTES))
+                .setRequestTimeout(new Duration(10, SECONDS))
                 .setSocksProxy(null)
                 .setMaxFrameSize(new DataSize(16, MEGABYTE))
                 .setSslEnabled(false)
