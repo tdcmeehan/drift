@@ -62,6 +62,7 @@ import java.io.PrintWriter;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
+import java.net.URI;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -87,6 +88,7 @@ import static com.facebook.drift.codec.ThriftProtocolType.MAP;
 import static com.facebook.drift.codec.ThriftProtocolType.SET;
 import static com.facebook.drift.codec.ThriftProtocolType.STRING;
 import static com.facebook.drift.codec.ThriftProtocolType.STRUCT;
+import static com.facebook.drift.codec.ThriftProtocolType.URI;
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.Iterables.getOnlyElement;
 import static io.airlift.bytecode.Access.BRIDGE;
@@ -1112,6 +1114,7 @@ public class ThriftCodecByteCodeGenerator<T>
             case I32:
             case I64:
             case STRING:
+            case URI:
             case BINARY:
             case STRUCT:
             case ENUM:
@@ -1161,6 +1164,7 @@ public class ThriftCodecByteCodeGenerator<T>
             writeBuilder.put(I32, ProtocolWriter.class.getMethod("writeI32Field", String.class, short.class, int.class));
             writeBuilder.put(I64, ProtocolWriter.class.getMethod("writeI64Field", String.class, short.class, long.class));
             writeBuilder.put(STRING, ProtocolWriter.class.getMethod("writeStringField", String.class, short.class, String.class));
+            writeBuilder.put(URI, ProtocolWriter.class.getMethod("writeUriField", String.class, short.class, URI.class));
             writeBuilder.put(BINARY, ProtocolWriter.class.getMethod("writeBinaryField", String.class, short.class, ByteBuffer.class));
             writeBuilder.put(STRUCT, ProtocolWriter.class.getMethod("writeStructField", String.class, short.class, ThriftCodec.class, Object.class));
             writeBuilder.put(MAP, ProtocolWriter.class.getMethod("writeMapField", String.class, short.class, ThriftCodec.class, Map.class));
@@ -1175,6 +1179,7 @@ public class ThriftCodecByteCodeGenerator<T>
             readBuilder.put(I32, ProtocolReader.class.getMethod("readI32Field"));
             readBuilder.put(I64, ProtocolReader.class.getMethod("readI64Field"));
             readBuilder.put(STRING, ProtocolReader.class.getMethod("readStringField"));
+            readBuilder.put(URI, ProtocolReader.class.getMethod("readUriField"));
             readBuilder.put(BINARY, ProtocolReader.class.getMethod("readBinaryField"));
             readBuilder.put(STRUCT, ProtocolReader.class.getMethod("readStructField", ThriftCodec.class));
             readBuilder.put(MAP, ProtocolReader.class.getMethod("readMapField", ThriftCodec.class));

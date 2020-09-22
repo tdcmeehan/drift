@@ -56,6 +56,7 @@ public class ThriftTypeRenderer
                 // VOID is encoded as a struct
                 return type.equals(ThriftType.VOID) ? "void" : prefix(type) + type.getStructMetadata().getStructName();
             case STRING:
+            case URI:
                 return "string";
             case BINARY:
                 return "binary";

@@ -27,6 +27,7 @@ public enum ThriftProtocolType
     I32(TType.I32),
     I64(TType.I64),
     STRING(TType.STRING),
+    URI(TType.STRING),
     STRUCT(TType.STRUCT),
     MAP(TType.MAP),
     SET(TType.SET),

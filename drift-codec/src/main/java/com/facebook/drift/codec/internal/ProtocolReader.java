@@ -27,6 +27,7 @@ import com.facebook.drift.protocol.TType;
 
 import javax.annotation.concurrent.NotThreadSafe;
 
+import java.net.URI;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -113,6 +114,18 @@ public class ProtocolReader
         Object fieldValue = codec.read(protocol);
         protocol.readFieldEnd();
         return fieldValue;
+    }
+
+    public URI readUriField()
+            throws TException
+    {
+        if (!checkReadState(TType.STRING)) {
+            return null;
+        }
+        currentField = null;
+        String fieldValue = protocol.readString();
+        protocol.readFieldEnd();
+        return URI.create(fieldValue);
     }
 
     public ByteBuffer readBinaryField()

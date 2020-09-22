@@ -22,6 +22,7 @@ import com.google.common.reflect.TypeToken;
 import javax.annotation.concurrent.Immutable;
 
 import java.lang.reflect.Type;
+import java.net.URI;
 import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.Map;
@@ -47,6 +48,7 @@ public class ThriftType
     public static final ThriftType I64 = new ThriftType(ThriftProtocolType.I64, long.class);
     public static final ThriftType STRING = new ThriftType(ThriftProtocolType.STRING, String.class);
     public static final ThriftType BINARY = new ThriftType(ThriftProtocolType.BINARY, ByteBuffer.class);
+    public static final ThriftType URI = new ThriftType(ThriftProtocolType.URI, URI.class);
     public static final ThriftType VOID = new ThriftType(ThriftProtocolType.STRUCT, void.class);
 
     public static final ThriftTypeReference BOOL_REF = new DefaultThriftTypeReference(BOOL);
@@ -58,6 +60,7 @@ public class ThriftType
     public static final ThriftTypeReference STRING_REF = new DefaultThriftTypeReference(STRING);
     public static final ThriftTypeReference BINARY_REF = new DefaultThriftTypeReference(BINARY);
     public static final ThriftTypeReference VOID_REF = new DefaultThriftTypeReference(VOID);
+    public static final ThriftTypeReference URI_REF = new DefaultThriftTypeReference(URI);
 
     public static ThriftType struct(ThriftStructMetadata structMetadata)
     {

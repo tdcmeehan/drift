@@ -27,6 +27,7 @@ import com.facebook.drift.protocol.TType;
 
 import javax.annotation.concurrent.NotThreadSafe;
 
+import java.net.URI;
 import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.Map;
@@ -135,6 +136,18 @@ public class ProtocolWriter
 
         protocol.writeFieldBegin(new TField(name, TType.STRING, id));
         protocol.writeString(string);
+        protocol.writeFieldEnd();
+    }
+
+    public void writeUriField(String name, short id, URI uri)
+            throws TException
+    {
+        if (uri == null) {
+            return;
+        }
+
+        protocol.writeFieldBegin(new TField(name, TType.STRING, id));
+        protocol.writeString(uri.toString());
         protocol.writeFieldEnd();
     }
 
