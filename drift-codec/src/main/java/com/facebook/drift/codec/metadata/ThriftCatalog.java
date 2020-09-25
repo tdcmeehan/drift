@@ -64,7 +64,6 @@ import static com.facebook.drift.codec.metadata.ThriftType.I16;
 import static com.facebook.drift.codec.metadata.ThriftType.I32;
 import static com.facebook.drift.codec.metadata.ThriftType.I64;
 import static com.facebook.drift.codec.metadata.ThriftType.STRING;
-import static com.facebook.drift.codec.metadata.ThriftType.URI;
 import static com.facebook.drift.codec.metadata.ThriftType.VOID;
 import static com.facebook.drift.codec.metadata.ThriftType.array;
 import static com.facebook.drift.codec.metadata.ThriftType.enumType;
@@ -319,9 +318,6 @@ public final class ThriftCatalog
             Type elementType = getOptionalType(javaType);
             return optional(getOptionalThriftTypeReference(elementType));
         }
-        if (URI.class.isAssignableFrom(rawType)) {
-            return URI;
-        }
         // The void type is used by service methods and is encoded as an empty struct
         if (void.class.isAssignableFrom(rawType) || Void.class.isAssignableFrom(rawType)) {
             return VOID;
@@ -505,10 +501,6 @@ public final class ThriftCatalog
         if (Optional.class.isAssignableFrom(rawType)) {
             Type elementType = getOptionalType(javaType);
             return getThriftProtocolType(elementType);
-        }
-
-        if (URI.class.isAssignableFrom(rawType)) {
-            return ThriftProtocolType.URI;
         }
 
         if (isStructType(rawType)) {

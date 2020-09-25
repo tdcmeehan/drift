@@ -175,7 +175,7 @@ public final class ThriftCodecManager
         addBuiltinCodec(new ByteBufferThriftCodec());
         addBuiltinCodec(new StringThriftCodec());
         addBuiltinCodec(new VoidThriftCodec());
-        addBuiltinCodec(new UriThriftCodec());
+        addBuiltinCodec(new UriThriftCodec(catalog));
         addBuiltinCodec(new BooleanArrayThriftCodec());
         addBuiltinCodec(new ShortArrayThriftCodec());
         addBuiltinCodec(new IntArrayThriftCodec());
